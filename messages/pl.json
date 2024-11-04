@@ -4,6 +4,37 @@
     "description": "Apartament Golden Luna to idealne miejsce na wypoczynek w San Pedro del Pinatar, zaledwie 1,8 km od plaż Villananitos i La Mota. Ciesz się bezpłatnym parkingiem, Wi-Fi oraz doskonałymi warunkami do spania w naszych przytulnych apartamentach z klimatyzacją, które obejmują 2 sypialnie, w pełni wyposażoną kuchnię oraz 2 łazienki. Odpoczywaj na tarasie, pływaj w odkrytym basenie lub odkrywaj okolicę, która oferuje możliwości wędrówek, wędkowania i gry w squasha. Nasz personel mówi po angielsku, hiszpańsku, francusku i norwesku i zawsze chętnie pomoże. Zarezerwuj swoje wymarzone zakwaterowanie już dziś!",
     "keywords": "Hiszpania, wakacje, basen, plaża, słońce, 2 sypialnie, Costa Calida, ścieżki rowerowe, wycieczki rowerowe, SUP, skutery wodne, kajaki, różowe jeziora, flamingi, zdrowie, paella, pyszne jedzenie, relaks, wakacje z dziećmi, ferie, święta w Hiszpanii, Wielkanoc w Hiszpanii, Święto Ognia, zabytki, apartamenty do wynajęcia, aktywny wypoczynek, plaże Costa Calida."
   },
+  "homepage": {
+    "testimonials": {
+      "title": "Our testimonials",
+      "subtitle": "Check out our testimonials from our Facebook page",
+      "leaveReview": "Leave review",
+      "aga": {
+        "title": "Doświadcz luksusu w Golden Luna!",
+        "text": "Golden Luna to wspaniały apartament! Bardzo czysto, wygodnie i ładnie urządzony. Doskonałe wyposażenie w cichej, pięknej okolicy. Gorąco polecam pobyt tutaj!",
+        "userName": "Aga",
+        "imgAltText": ""
+      },
+      "ewelina": {
+        "title": "Idealny wypad blisko plaży!",
+        "text": "Czysto i wszystko, co potrzebne. Idealny na wypad z przyjaciółmi. Blisko morza, placu zabaw i toru przeszkód, 2 minuty spacerem Klimatyczne miasteczko, polecam!",
+        "userName": "Ewelina",
+        "imgAltText": ""
+      },
+      "paulina": {
+        "title": "Fantastyczny wypad dla rodziny!",
+        "text": "Byliśmy w maju z rodziną i było fantastycznie! Świeże, gustownie urządzone mieszkanie z dwiema łazienkami. Blisko do morza, sklepów i ładnego basenu. Gorąco polecam!",
+        "userName": "Paulina",
+        "imgAltText": ""
+      },
+      "ania": {
+        "title": "Przytulny i dobrze wyposażony apartament!",
+        "text": "Apartament fantastyczny! Czyste, przytulne, pachnące wnętrze. Aneks kuchenny super wyposażony, a łazienki mają przestronne kabiny prysznicowe. Bardzo polecamy!",
+        "userName": "Ania",
+        "imgAltText": ""
+      }
+    }
+  },
   "footer": {
     "copyrights": "Wszelkie prawa zastrzeżone. Zbudowany przy użyciu"
   },

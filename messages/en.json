@@ -4,6 +4,37 @@
     "description": "Apartment Golden Luna is the perfect place for a getaway in San Pedro del Pinatar, just 1.8 km from Villananitos Beach and La Mota Beach. Enjoy free parking, Wi-Fi, and excellent sleeping conditions in our cozy air-conditioned apartments, which feature 2 bedrooms, a fully equipped kitchen, and 2 bathrooms. Relax on the terrace, swim in the outdoor pool, or explore the surrounding area, which offers opportunities for hiking, fishing, and squash. Our staff speaks English, Spanish, French, and Norwegian and is always ready to assist you. Book your ideal accommodation today!",
     "keywords": "Spain, holidays, pool, beach, sun, 2 bedrooms, Costa Calida, bike paths, cycling tours, SUP, jet skiing, kayaking, pink lakes, flamingos, wellness, paella, delicious food, relaxation, family holidays, vacations, Easter in Spain, Fire Festival, attractions, vacation rentals, active recreation, Costa Calida beaches."
   },
+  "homepage": {
+    "testimonials": {
+      "title": "Our testimonials",
+      "subtitle": "Check out our testimonials from our Facebook page",
+      "leaveReview": "Leave review",
+      "aga": {
+        "title": "Experience Luxury at Golden Luna!",
+        "text": "Golden Luna is a fantastic apartment! It's very clean, comfortable, and beautifully decorated. Great amenities in a quiet, lovely area. Highly recommend staying here!",
+        "userName": "Aga",
+        "imgAltText": ""
+      },
+      "ewelina": {
+        "title": "Perfect Getaway Near the Beach!",
+        "text": "Clean and equipped. Perfect for a getaway with friends. Close to the beach, playground, and obstacle course, just 2 minutes away Charming town, highly recommend!",
+        "userName": "Ewelina",
+        "imgAltText": ""
+      },
+      "paulina": {
+        "title": "Fantastic Family Getaway!",
+        "text": "We visited in May with the family, and it was fantastic! Fresh, tastefully decorated apartment with two bathrooms. Close to the beach, shops, and a lovely pool. Highly recommend!",
+        "userName": "Paulina",
+        "imgAltText": ""
+      },
+      "ania": {
+        "title": "Cozy and Well-Equipped Apartment!",
+        "text": "Fantastic apartment! Clean, cozy, and fragrant interior. The kitchen area is well-equipped, and the bathrooms have spacious showers. We are very satisfied and highly recommend!",
+        "userName": "Ania",
+        "imgAltText": ""
+      }
+    }
+  },
   "footer": {
     "copyrights": "All Rights Reserverd. Built with"
   },
