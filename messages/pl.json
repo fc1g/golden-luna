@@ -5,13 +5,15 @@
     "keywords": "Hiszpania, wakacje, basen, plaża, słońce, 2 sypialnie, Costa Calida, ścieżki rowerowe, wycieczki rowerowe, SUP, skutery wodne, kajaki, różowe jeziora, flamingi, zdrowie, paella, pyszne jedzenie, relaks, wakacje z dziećmi, ferie, święta w Hiszpanii, Wielkanoc w Hiszpanii, Święto Ognia, zabytki, apartamenty do wynajęcia, aktywny wypoczynek, plaże Costa Calida."
   },
   "homepage": {
-    "title": {
-      "firstPart": "Znajdź Swój Wymarzony",
-      "vacation": "Urlop",
-      "secondPart": "Dom w Hiszpanii"
-    },
-    "subtitle": "Poczuj się jak w domu, z dala od domu",
-    "moreInfo": "Więcej info"
+    "hero": {
+      "title": {
+        "firstPart": "Znajdź Swój Wymarzony",
+        "vacation": "Urlop",
+        "secondPart": "Dom w Hiszpanii"
+      },
+      "subtitle": "Poczuj się jak w domu, z dala od domu",
+      "moreInfo": "Więcej info"
+    }
   },
   "footer": {
     "copyrights": "Wszelkie prawa zastrzeżone. Zbudowany przy użyciu"

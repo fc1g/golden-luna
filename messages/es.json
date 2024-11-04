@@ -5,13 +5,15 @@
     "keywords": "España, vacaciones, piscina, playa, sol, 2 dormitorios, Costa Cálida, senderos para bicicletas, excursiones en bicicleta, SUP, motos de agua, kayak, lagos rosas, flamencos, salud, paella, comida deliciosa, relajación, vacaciones familiares, festividades, Semana Santa en España, Fiesta del Fuego, monumentos, alquiler de apartamentos, recreación activa, playas de Costa Cálida."
   },
   "homepage": {
-    "title": {
-      "firstPart": "Encuentra Tu Sueño",
-      "vacation": "Vacaciones",
-      "secondPart": "Casa en España"
-    },
-    "subtitle": "Siéntete como en casa, lejos de casa",
-    "moreInfo": "Más info"
+    "hero": {
+      "title": {
+        "firstPart": "Encuentra Tu Sueño",
+        "vacation": "Vacaciones",
+        "secondPart": "Casa en España"
+      },
+      "subtitle": "Siéntete como en casa, lejos de casa",
+      "moreInfo": "Más info"
+    }
   },
   "footer": {
     "copyrights": "Todos los derechos reservados. Construido con"

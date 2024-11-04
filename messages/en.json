@@ -5,13 +5,15 @@
     "keywords": "Spain, holidays, pool, beach, sun, 2 bedrooms, Costa Calida, bike paths, cycling tours, SUP, jet skiing, kayaking, pink lakes, flamingos, wellness, paella, delicious food, relaxation, family holidays, vacations, Easter in Spain, Fire Festival, attractions, vacation rentals, active recreation, Costa Calida beaches."
   },
   "homepage": {
-    "title": {
-      "firstPart": "Find Your Dream",
-      "vacation": "Vacation",
-      "secondPart": "Home in Spain"
-    },
-    "subtitle": "Feel at home, away from home",
-    "moreInfo": "More info"
+    "hero": {
+      "title": {
+        "firstPart": "Find Your Dream",
+        "vacation": "Vacation",
+        "secondPart": "Home in Spain"
+      },
+      "subtitle": "Feel at home, away from home",
+      "moreInfo": "More info"
+    }
   },
   "footer": {
     "copyrights": "All Rights Reserverd. Built with"

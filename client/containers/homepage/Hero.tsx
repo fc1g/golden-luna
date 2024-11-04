@@ -28,10 +28,11 @@ const data: Data = [
 ];
 
 export default function Hero({ locale }: { locale: Locale }) {
-  const t = useTranslations('homepage');
+  const t = useTranslations('homepage.hero');
 
   return (
     <section className="relative mx-auto flex h-screen w-full before:absolute before:inset-0 before:z-[1] before:block before:bg-gradient-to-r before:from-[#00000080] before:to-[#00000080] before:opacity-90 before:content-['']">
+      {/* TODO: */}
       <Image
         src={mobile}
         alt="gs"
@@ -40,7 +41,7 @@ export default function Hero({ locale }: { locale: Locale }) {
         sizes="(max-width: 600px) 375px, (min-width: 601px) 1280px"
         className="object-cover md:hidden"
       />
-
+      {/* TODO: */}
       <Image
         src={desk}
         alt="gs"
