@@ -1,0 +1,10 @@
+[
+  {
+    "href": "https://nextjs.org/",
+    "label": "Next.js"
+  },
+  {
+    "href": "https://tailwindcss.com/",
+    "label": "Tailwind CSS"
+  }
+]

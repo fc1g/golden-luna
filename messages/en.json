@@ -1,0 +1,16 @@
+{
+  "Metadata": {
+    "title": "Golden Luna",
+    "description": "Description",
+    "keywords": "Keywords"
+  },
+  "footer": {
+    "copyrights": "All Rights Reserverd. Built with"
+  },
+  "error": {
+    "message": "We are already working to solve the problem.",
+    "reset": "Reset",
+    "empty": "This list is empty",
+    "pity": "Unfortunately, an error occurred."
+  }
+}
