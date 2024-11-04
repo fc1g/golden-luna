@@ -1,18 +1,18 @@
-import Footer from "@/client/components/ui/footer/Footer";
-import { Children } from "@/client/types/Children";
-import { Params } from "@/client/types/Params";
-import { routing } from "@/server/libs/i18n/routing";
-import { Locale } from "@/server/types/Locale";
-import { Metadata } from "next";
-import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Inter } from "next/font/google";
-import { notFound } from "next/navigation";
-import Providers from "../(providers)/providers";
+import Footer from '@/client/components/ui/footer/Footer';
+import { Children } from '@/client/types/Children';
+import { Params } from '@/client/types/Params';
+import { routing } from '@/server/libs/i18n/routing';
+import { Locale } from '@/server/types/Locale';
+import { Metadata } from 'next';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Inter } from 'next/font/google';
+import { notFound } from 'next/navigation';
+import Providers from '../(providers)/providers';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+  return routing.locales.map(locale => ({ locale }));
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
@@ -20,9 +20,9 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const t = await getTranslations({ locale });
 
   return {
-    title: t("Metadata.title"),
-    description: t("Metadata.description"),
-    keywords: t("Metadata.keywords"),
+    title: t('Metadata.title'),
+    description: t('Metadata.description'),
+    keywords: t('Metadata.keywords'),
   };
 }
 
