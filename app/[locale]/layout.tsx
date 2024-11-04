@@ -1,3 +1,4 @@
+import Footer from "@/client/components/ui/footer/Footer";
 import { Children } from "@/client/types/Children";
 import { Params } from "@/client/types/Params";
 import { routing } from "@/server/libs/i18n/routing";
@@ -39,7 +40,11 @@ export default async function RootLayout({
   return (
     <html className="h-full" lang={locale} suppressHydrationWarning>
       <body className={`${inter.className} h-full antialiased`}>
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+
+          <Footer locale={locale} />
+        </Providers>
       </body>
     </html>
   );
