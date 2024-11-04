@@ -4,6 +4,30 @@
     "description": "Apartment Golden Luna es el lugar perfecto para una escapada en San Pedro del Pinatar, a solo 1,8 km de las playas Villananitos y La Mota. Disfruta de aparcamiento gratuito, Wi-Fi y excelentes condiciones para dormir en nuestros acogedores apartamentos con aire acondicionado, que incluyen 2 dormitorios, una cocina totalmente equipada y 2 baños. Relájate en la terraza, nada en la piscina al aire libre o explora los alrededores, que ofrecen oportunidades para hacer senderismo, pescar y jugar al squash. Nuestro personal habla inglés, español, francés y noruego, y siempre está listo para ayudarte. ¡Reserva tu alojamiento ideal hoy mismo!",
     "keywords": "España, vacaciones, piscina, playa, sol, 2 dormitorios, Costa Cálida, senderos para bicicletas, excursiones en bicicleta, SUP, motos de agua, kayak, lagos rosas, flamencos, salud, paella, comida deliciosa, relajación, vacaciones familiares, festividades, Semana Santa en España, Fiesta del Fuego, monumentos, alquiler de apartamentos, recreación activa, playas de Costa Cálida."
   },
+  "header": {
+    "nav": {
+      "home": "Inicio",
+      "about": "Acerca de",
+      "surrounding": "Alrededores",
+      "contacts": "Contactos"
+    },
+    "theme": {
+      "toggle": "Cambiar tema",
+      "light": "Claro",
+      "dark": "Oscuro",
+      "system": "Sistema"
+    },
+    "hamburger": {
+      "close": "Cerrar menú",
+      "open": "Abrir menú",
+      "label": "Menú móvil"
+    },
+    "langList": {
+      "en": "Inglés",
+      "pl": "Polaco",
+      "es": "Español"
+    }
+  },
   "homepage": {
     "hero": {
       "title": {
@@ -13,6 +37,35 @@
       },
       "subtitle": "Siéntete como en casa, lejos de casa",
       "moreInfo": "Más info"
+    },
+    "testimonials": {
+      "title": "Nuestros testimonios",
+      "subtitle": "Consulta nuestros testimonios de nuestra página de Facebook",
+      "leaveReview": "Deja una reseña",
+      "aga": {
+        "title": "Experimenta el lujo",
+        "text": "¡Golden Luna es un apartamento fantástico! Está muy limpio, cómodo y bellamente decorado. Excelentes comodidades en una zona tranquila y encantadora. ¡Lo recomiendo mucho!",
+        "userName": "Aga",
+        "imgAltText": "Una mujer con cabello oscuro hasta los hombros y una camisa blanca está sentada en interiores, mirando directamente a la cámara. El fondo está suavemente desenfocado con elementos de una cafetería."
+      },
+      "ewelina": {
+        "title": "¡Playa perfecta!",
+        "text": "Limpio y equipado. Perfecto para una escapada con amigos. Cerca de la playa, parque infantil y circuito de obstáculos, a solo 2 minutos. Un pueblo encantador, ¡lo recomiendo mucho!",
+        "userName": "Ewelina",
+        "imgAltText": "Una persona con cabello oscuro hasta los hombros y una parte superior blanca está mirando a la cámara contra un fondo neutro."
+      },
+      "paulina": {
+        "title": "¡Fantástica escapada familiar!",
+        "text": "Visitamos en mayo con la familia, ¡y fue fantástico! Apartamento fresco y decorado con buen gusto, con dos baños. Cerca de la playa, tiendas y una hermosa piscina. ¡Lo recomiendo mucho!",
+        "userName": "Paulina",
+        "imgAltText": "Una mujer con cabello oscuro largo y recto y una camisa azul clara sonríe a la cámara. El fondo es de un suave azul difuminado."
+      },
+      "ania": {
+        "title": "¡Apartamento acogedor!",
+        "text": "¡Apartamento fantástico! Interior limpio, acogedor y fragante. La zona de la cocina está bien equipada, y los baños tienen duchas espaciosas. Estamos muy satisfechos y ¡lo recomendamos mucho!",
+        "userName": "Ania",
+        "imgAltText": "Una mujer con cabello rizado rojo y una expresión neutral está de pie contra un fondo rosa."
+      }
     }
   },
   "footer": {

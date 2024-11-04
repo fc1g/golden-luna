@@ -31,7 +31,7 @@ export default function Hero({ locale }: { locale: Locale }) {
   const t = useTranslations('homepage.hero');
 
   return (
-    <section className="relative mx-auto flex h-screen w-full before:absolute before:inset-0 before:z-[1] before:block before:bg-gradient-to-r before:from-[#00000080] before:to-[#00000080] before:opacity-90 before:content-['']">
+    <section className="relative mx-auto flex h-screen w-full before:absolute before:inset-0 before:z-[1] before:block before:bg-gradient-to-r before:from-[#00000080] before:to-[#00000080] before:opacity-75 before:content-['']">
       {/* TODO: */}
       <Image
         src={mobile}
@@ -53,14 +53,14 @@ export default function Hero({ locale }: { locale: Locale }) {
 
       <div className="relative z-[2] flex flex-col justify-center ~/md:~px-3/6">
         <h1
-          className={`${locale === 'en' && '~text-2xl/6xl ~max-w-80/3xl'} ${locale === 'pl' && '~text-xl/5xl ~max-w-80/3xl'} ${locale === 'es' && '~text-xl/5xl ~max-w-80/3xl'} md:mt-8`}
+          className={`${locale === 'en' ? '~max-w-72/2xl' : '~max-w-80/3xl'} text-white ~text-xl/5xl md:mt-8`}
         >
           {t('title.firstPart')}{' '}
           <span className="text-[#85cbff]">{t('title.vacation')}</span>{' '}
           {t('title.secondPart')}
         </h1>
 
-        <p className="mb-6 mt-2 ~text-sm/2xl">{t('subtitle')}</p>
+        <p className="mb-6 mt-2 text-white ~text-sm/2xl">{t('subtitle')}</p>
 
         {data.map(({ size, className }) => (
           <div key={size}>

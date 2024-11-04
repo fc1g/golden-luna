@@ -4,6 +4,30 @@
     "description": "Apartment Golden Luna is the perfect place for a getaway in San Pedro del Pinatar, just 1.8 km from Villananitos Beach and La Mota Beach. Enjoy free parking, Wi-Fi, and excellent sleeping conditions in our cozy air-conditioned apartments, which feature 2 bedrooms, a fully equipped kitchen, and 2 bathrooms. Relax on the terrace, swim in the outdoor pool, or explore the surrounding area, which offers opportunities for hiking, fishing, and squash. Our staff speaks English, Spanish, French, and Norwegian and is always ready to assist you. Book your ideal accommodation today!",
     "keywords": "Spain, holidays, pool, beach, sun, 2 bedrooms, Costa Calida, bike paths, cycling tours, SUP, jet skiing, kayaking, pink lakes, flamingos, wellness, paella, delicious food, relaxation, family holidays, vacations, Easter in Spain, Fire Festival, attractions, vacation rentals, active recreation, Costa Calida beaches."
   },
+  "header": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "surrounding": "Surrounding",
+      "contacts": "Contacts"
+    },
+    "theme": {
+      "toggle": "Toggle theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "hamburger": {
+      "close": "Close menu",
+      "open": "Open menu",
+      "label": "Mobile menu"
+    },
+    "langList": {
+      "en": "English",
+      "pl": "Polish",
+      "es": "Spanish"
+    }
+  },
   "homepage": {
     "hero": {
       "title": {
@@ -13,6 +37,35 @@
       },
       "subtitle": "Feel at home, away from home",
       "moreInfo": "More info"
+    },
+    "testimonials": {
+      "title": "Our testimonials",
+      "subtitle": "Check out our testimonials from our Facebook page",
+      "leaveReview": "Leave review",
+      "aga": {
+        "title": "Experience Luxury",
+        "text": "Golden Luna is a fantastic apartment! It's very clean, comfortable, and beautifully decorated. Great amenities in a quiet, lovely area. Highly recommend staying here!",
+        "userName": "Aga",
+        "imgAltText": "A woman with shoulder-length dark hair and a white shirt sits indoors, looking directly at the camera. The background is softly blurred with elements of a cafe setting."
+      },
+      "ewelina": {
+        "title": "Perfect Beach!",
+        "text": "Clean and equipped. Perfect for a getaway with friends. Close to the beach, playground, and obstacle course, just 2 minutes away Charming town, highly recommend!",
+        "userName": "Ewelina",
+        "imgAltText": "A person with shoulder-length dark hair and wearing a white top is looking at the camera against a neutral background."
+      },
+      "paulina": {
+        "title": "Fantastic Family Getaway!",
+        "text": "We visited in May with the family, and it was fantastic! Fresh, tastefully decorated apartment with two bathrooms. Close to the beach, shops, and a lovely pool. Highly recommend!",
+        "userName": "Paulina",
+        "imgAltText": "A woman with long, straight dark hair and a light blue button-up shirt smiles at the camera. The background is a soft, blurred blue"
+      },
+      "ania": {
+        "title": "Cozy Apartment!",
+        "text": "Fantastic apartment! Clean, cozy, and fragrant interior. The kitchen area is well-equipped, and the bathrooms have spacious showers. We are very satisfied and highly recommend!",
+        "userName": "Ania",
+        "imgAltText": "A woman with curly red hair and a neutral expression is standing against a pink background."
+      }
     }
   },
   "footer": {

@@ -1,0 +1,18 @@
+[
+  {
+    "href": "/",
+    "label": "home"
+  },
+  {
+    "href": "/about",
+    "label": "about"
+  },
+  {
+    "href": "/surrounding",
+    "label": "surrounding"
+  },
+  {
+    "href": "/contacts",
+    "label": "contacts"
+  }
+]
