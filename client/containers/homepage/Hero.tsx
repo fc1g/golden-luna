@@ -31,11 +31,11 @@ export default function Hero({ locale }: { locale: Locale }) {
   const t = useTranslations('homepage.hero');
 
   return (
-    <section className="relative mx-auto flex h-screen w-full before:absolute before:inset-0 before:z-[1] before:block before:bg-gradient-to-r before:from-[#000000d0] before:to-[#000000d0] before:opacity-60 before:content-[''] dark:before:opacity-70">
+    <section className="relative mx-auto flex h-screen w-full before:absolute before:inset-0 before:z-[1] before:block before:bg-gradient-to-r before:from-[#000000d0] before:to-[#000000d0] before:opacity-70 before:content-['']">
       <Image
         src={mobile}
         alt={t('imageAltText')}
-        priority
+        loading="lazy"
         fill
         sizes="(max-width: 600px) 375px, (min-width: 601px) 1280px"
         className="object-cover md:hidden"

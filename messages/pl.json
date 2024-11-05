@@ -69,6 +69,25 @@
       }
     }
   },
+  "about": {
+    "gallery": {
+      "houseFromOutside": "Nowoczesny biały dom z kamiennymi akcentami, szklanymi balkonami i otwartą bramą do dziedzińca.",
+      "lounge": "Salon z szarą sofą, stołem jadalnym i kuchnią w tle; dekoracyjne okrągłe obrazy na ścianach i światło naturalne.",
+      "dinningRoom": "Jasna jadalnia z białym stołem, kolorowymi krzesłami, szarą sofą i nowoczesnymi dekoracjami.",
+      "kitchen": "Biała kuchnia z szafkami, sprzętem ze stali nierdzewnej i stołkami przy wyspie.",
+      "kitchenFirstPart": "Biała kuchnia z metaliczną lodówką, mikrofalówką, zmywarką i czarną misą dla kontrastu.",
+      "kitchenSecondPart": "Minimalistyczna kuchnia z kuchenką, piekarnikiem, zlewem i pustymi blatami.",
+      "firstRoom": "Sypialnia z białą pościelą, lawendowymi poduszkami, obrazami łódek i naturalnym światłem.",
+      "secondRoom": "Sypialnia z dwoma łóżkami, wzorzystymi narzutami, obrazem na ścianie i przytulnym klimatem.",
+      "firstBathroom": "Biała łazienka z lustrem, elegancką toaletką i jasnoszarymi ścianami.",
+      "secondBathroom": "Łazienka z kafelkami, prysznicem, umywalką, lustrem i koszem na pranie.",
+      "pool": "Basen o kształcie nerki z palmami, leżakami i pobliskimi budynkami.",
+      "playground": "Kolorowy plac zabaw z huśtawkami, zjeżdżalnią i ogrodzeniem w paski.",
+      "playgroundNearSea": "Plac zabaw nad morzem z widokiem na marinę i piasek plażowy.",
+      "beach": "Promenada z palmami, kawiarnią na świeżym powietrzu i widokiem na ocean.",
+      "park": "Pusty garaż z białymi ścianami, czerwonymi pasami i oznaczonymi miejscami."
+    }
+  },
   "footer": {
     "copyrights": "Wszelkie prawa zastrzeżone. Zbudowany przy użyciu"
   },
