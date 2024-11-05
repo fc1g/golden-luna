@@ -1,5 +1,6 @@
 import Header from '@/client/components/ui/header/Header';
 import Gallery from '@/client/containers/about/Gallery';
+import HouseInfo from '@/client/containers/about/HouseInfo';
 import { Params } from '@/client/types/Params';
 import { setRequestLocale } from 'next-intl/server';
 
@@ -17,6 +18,8 @@ export default async function AboutPage({ params }: Params) {
 
       <main className="flex-auto" role="main">
         <Gallery />
+
+        <HouseInfo />
       </main>
     </>
   );

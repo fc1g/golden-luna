@@ -22,11 +22,7 @@ export default function Nav({
   const pathname = usePathname();
 
   return (
-    <ul
-      aria-label="navigation"
-      role="navigation"
-      className={`${className} rounded-lg`}
-    >
+    <ul aria-label="navigation" className={`${className} rounded-lg`}>
       {navLinks.map(link => (
         <li className="group rounded ~/md:~p-3/0" key={link.label}>
           <Link
