@@ -1,33 +1,32 @@
-import Title from "@/client/components/Title";
-import { Button } from "@/client/components/ui/button";
+import Title from '@/client/components/Title';
+import { Button } from '@/client/components/ui/button';
 
-import TestimonialsList from "@/client/components/ui/homepage/TestimonialsList";
-import aga from "@/public/images/users/aga.webp";
-import ania from "@/public/images/users/ania.webp";
-import ewelina from "@/public/images/users/ewelina.webp";
-import paulina from "@/public/images/users/paulina.webp";
-import { useTranslations } from "next-intl";
-import { StaticImageData } from "next/image";
+import TestimonialsList from '@/client/components/ui/homepage/TestimonialsList';
+import aga from '@/public/images/users/aga.webp';
+import ania from '@/public/images/users/ania.webp';
+import ewelina from '@/public/images/users/ewelina.webp';
+import paulina from '@/public/images/users/paulina.webp';
+import { useTranslations } from 'next-intl';
+import { StaticImageData } from 'next/image';
 
 type TestimonialData = {
   src: StaticImageData;
   username: string;
 };
 
-// TODO: imageAltText
 const testimonials: TestimonialData[] = [
-  { src: aga, username: "aga" },
-  { src: ewelina, username: "ewelina" },
-  { src: paulina, username: "paulina" },
-  { src: ania, username: "ania" },
+  { src: aga, username: 'aga' },
+  { src: ewelina, username: 'ewelina' },
+  { src: paulina, username: 'paulina' },
+  { src: ania, username: 'ania' },
 ];
 
 export default function Testimonials() {
-  const t = useTranslations("homepage.testimonials");
+  const t = useTranslations('homepage.testimonials');
 
   return (
     <section className="pb-8 pt-16 text-center lg:pb-16 lg:pt-24">
-      <Title title={t("title")} subtitle={t("subtitle")} />
+      <Title title={t('title')} subtitle={t('subtitle')} />
 
       <TestimonialsList>
         {testimonials.map(({ src, username }) => (
@@ -46,7 +45,7 @@ export default function Testimonials() {
             target="blank"
             rel="noopener noreferrer"
           >
-            {t("leaveReview")} &rarr;
+            {t('leaveReview')} &rarr;
           </a>
         </Button>
       </div>

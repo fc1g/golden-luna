@@ -36,7 +36,8 @@
         "secondPart": "Home in Spain"
       },
       "subtitle": "Feel at home, away from home",
-      "moreInfo": "More info"
+      "moreInfo": "More info",
+      "imageAltText": "Modern white building with stone accents and glass balconies, featuring an open gate leading to a fenced courtyard. The structure has clean lines and is surrounded by a paved sidewalk and some greenery under a clear blue sky."
     },
     "testimonials": {
       "title": "Our testimonials",
@@ -72,9 +73,12 @@
     "copyrights": "All Rights Reserverd. Built with"
   },
   "error": {
-    "message": "We are already working to solve the problem.",
+    "500m": "We are already working to solve the problem",
     "reset": "Reset",
     "empty": "This list is empty",
-    "pity": "Unfortunately, an error occurred."
+    "pity": "Unfortunately, an error occurred",
+    "404b": "Back to Homepage",
+    "404m": "Something's missing",
+    "404d": "Sorry, we can't find that page. You'll find lots to explore on the home page"
   }
 }

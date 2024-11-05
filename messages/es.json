@@ -36,7 +36,8 @@
         "secondPart": "Casa en España"
       },
       "subtitle": "Siéntete como en casa, lejos de casa",
-      "moreInfo": "Más info"
+      "moreInfo": "Más info",
+      "imageAltText": "Edificio moderno blanco con acentos de piedra y balcones de vidrio, con una puerta abierta que lleva a un patio cercado. La estructura tiene líneas limpias y está rodeada por una acera pavimentada y algo de vegetación bajo un cielo azul claro."
     },
     "testimonials": {
       "title": "Nuestros testimonios",
@@ -72,9 +73,12 @@
     "copyrights": "Todos los derechos reservados. Construido con"
   },
   "error": {
-    "message": "Ya estamos trabajando para resolver el problema.",
+    "500m": "Ya estamos trabajando para solucionar el problema",
     "reset": "Restablecer",
     "empty": "Esta lista está vacía",
-    "pity": "Desafortunadamente, ocurrió un error."
+    "pity": "Desafortunadamente, ocurrió un error",
+    "404b": "Volver a la página principal",
+    "404m": "Algo falta",
+    "404d": "Lo sentimos, no podemos encontrar esa página. Encontrarás mucho para explorar en la página principal"
   }
 }

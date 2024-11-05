@@ -31,7 +31,7 @@ export default function Nav({
         <li className="group rounded ~/md:~p-3/0" key={link.label}>
           <Link
             onClick={setIsOpen}
-            className={`block px-2 transition duration-300 group-hover:text-primary ${pathname === link.href ? 'text-primary' : ''}`}
+            className={`block rounded px-2 transition duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring group-hover:text-primary ${pathname === link.href ? 'text-primary' : ''}`}
             href={link.href}
           >
             {links[link.label as keyof typeof links]}

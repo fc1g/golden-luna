@@ -36,7 +36,8 @@
         "secondPart": "Dom w Hiszpanii"
       },
       "subtitle": "Poczuj się jak w domu, z dala od domu",
-      "moreInfo": "Więcej info"
+      "moreInfo": "Więcej info",
+      "imageAltText": "Nowoczesny biały budynek z kamiennymi akcentami i szklanymi balkonami, z otwartą bramą prowadzącą na ogrodzony dziedziniec. Konstrukcja ma czyste linie i jest otoczona wyłożonym chodnikiem oraz zielenią pod czystym, błękitnym niebem."
     },
     "testimonials": {
       "title": "Nasze opinie",
@@ -72,9 +73,12 @@
     "copyrights": "Wszelkie prawa zastrzeżone. Zbudowany przy użyciu"
   },
   "error": {
-    "message": "Już pracujemy nad rozwiązaniem problemu.",
-    "reset": "Reset",
+    "500m": "Już pracujemy nad rozwiązaniem tego problemu",
+    "reset": "Zresetuj",
     "empty": "Ta lista jest pusta",
-    "pity": "Niestety, wystąpił błąd."
+    "pity": "Niestety wystąpił błąd",
+    "404b": "Powrót na stronę główną",
+    "404m": "Brakuje czegoś",
+    "404d": "Przepraszamy, nie możemy znaleźć tej strony. Na stronie głównej znajdziesz wiele do odkrycia"
   }
 }
