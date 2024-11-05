@@ -69,6 +69,20 @@
       }
     }
   },
+  "about": {
+    "houseInfo": {
+      "house": {
+        "title": "House",
+        "firstPart": "Apartment Golden Luna is a stylish and modern apartment with two bedrooms, a living room, and a fully equipped kitchen that includes a refrigerator and coffee maker. It features two bathrooms with showers and hairdryers, air conditioning for comfort during warm days, and a terrace that opens up to a lush garden, perfect for relaxation.",
+        "secondPart": "Guests benefit from Wi-Fi, garage parking, and parking spaces available in front of the building. For active guests, the apartment complex offers access to a squash court, a swimming pool, and a green garden area. The staff speaks English, Spanish, and French."
+      },
+      "surrounding": {
+        "title": "Surrounding",
+        "firstPart": "Apartment Golden Luna is located in San Pedro del Pinatar, just 1.8 km from the beaches of Villananitos and La Mota, known for their ideal swimming and snorkeling conditions. La Puntica beach is also nearby, just 2.1 km away. This area is renowned for its scenic hiking trails, numerous cycling routes, and excellent fishing opportunities.",
+        "secondPart": "San Pedro del Pinatar is also renowned for its therapeutic mud baths, popular across Europe. The area has many restaurants and shops for a convenient and enjoyable stay. The Region of Murcia International Airport is 35 km away, and Alicante Airport is 75 km from the property."
+      }
+    }
+  },
   "footer": {
     "copyrights": "All Rights Reserverd. Built with"
   },
