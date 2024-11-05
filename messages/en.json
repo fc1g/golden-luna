@@ -69,6 +69,25 @@
       }
     }
   },
+  "about": {
+    "gallery": {
+      "houseFromOutside": "Modern white house with stone accents, glass balconies, and an open gate leading to a courtyard.",
+      "lounge": "Living area with gray sofa, dining table, and kitchen in background; circular wall art and natural light.",
+      "dinningRoom": "Bright dining room with white table, colorful chairs, gray sofa, and modern art on walls.",
+      "kitchen": "White kitchen with cabinets, stainless steel appliances, and bar stools at the island.",
+      "kitchenFirstPart": "White kitchen with metallic fridge, microwave, dishwasher, and a black bowl for contrast.",
+      "kitchenSecondPart": "Minimalist kitchen with stovetop, oven, sink, and clear counters.",
+      "firstRoom": "Bedroom with white bedspread, lavender pillows, boat paintings, and natural light.",
+      "secondRoom": "Bedroom with twin beds, patterned bedspreads, wall art, and cozy ambiance.",
+      "firstBathroom": "White bathroom with wall mirror, sleek vanity, and light gray walls.",
+      "secondBathroom": "Bathroom with tiled walls, walk-in shower, sink, mirror, and laundry basket.",
+      "pool": "Kidney-shaped pool with palm trees, lounge chairs, and nearby buildings.",
+      "playground": "Colorful playground with slides, swings, and striped fence.",
+      "playgroundNearSea": "Playground by the sea with marina views and beach sand.",
+      "beach": "Beach promenade with palm trees, outdoor café, and ocean view.",
+      "park": "Empty parking garage with white walls, red stripes, and marked spaces."
+    }
+  },
   "footer": {
     "copyrights": "All Rights Reserverd. Built with"
   },

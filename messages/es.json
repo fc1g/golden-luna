@@ -69,6 +69,25 @@
       }
     }
   },
+  "about": {
+    "gallery": {
+      "houseFromOutside": "Moderna casa blanca con detalles de piedra, balcones de vidrio y una puerta abierta hacia el patio.",
+      "lounge": "Sala con sofá gris, mesa de comedor y cocina en el fondo; arte circular en la pared y luz natural.",
+      "dinningRoom": "Comedor luminoso con mesa blanca, sillas de colores, sofá gris y decoraciones modernas.",
+      "kitchen": "Cocina blanca con gabinetes, electrodomésticos de acero inoxidable y taburetes en la isla.",
+      "kitchenFirstPart": "Cocina blanca con nevera metálica, microondas, lavavajillas y un tazón negro de contraste.",
+      "kitchenSecondPart": "Cocina minimalista con estufa, horno, fregadero y encimeras despejadas.",
+      "firstRoom": "Dormitorio con colcha blanca, almohadas lavanda, cuadros de barcos y luz natural.",
+      "secondRoom": "Dormitorio con dos camas individuales, colchas estampadas, arte en la pared y ambiente acogedor.",
+      "firstBathroom": "Baño blanco con espejo, tocador elegante y paredes gris claro.",
+      "secondBathroom": "Baño con paredes de azulejos, ducha, lavabo, espejo y canasta de ropa.",
+      "pool": "Piscina en forma de riñón con palmeras, tumbonas y edificios cercanos.",
+      "playground": "Colorido parque infantil con columpios, tobogán y cerca a rayas.",
+      "playgroundNearSea": "Parque infantil junto al mar con vista a la marina y arena de playa.",
+      "beach": "Paseo marítimo con palmeras, cafetería al aire libre y vista al océano.",
+      "park": "Estacionamiento vacío con paredes blancas, rayas rojas y espacios marcados."
+    }
+  },
   "footer": {
     "copyrights": "Todos los derechos reservados. Construido con"
   },

@@ -1,10 +1,9 @@
 import Header from '@/client/components/ui/header/Header';
-import Hero from '@/client/containers/homepage/Hero';
-import Testimonials from '@/client/containers/homepage/Testimonials';
+import Gallery from '@/client/containers/about/Gallery';
 import { Params } from '@/client/types/Params';
 import { setRequestLocale } from 'next-intl/server';
 
-export default async function Home({ params }: Params) {
+export default async function AboutPage({ params }: Params) {
   const { locale } = await params;
   setRequestLocale(locale);
 
@@ -12,14 +11,12 @@ export default async function Home({ params }: Params) {
     <>
       <Header
         className="absolute inset-x-0 top-0 z-20"
-        logoStyles="text-white"
+        logoStyles="invisible"
         locale={locale}
       />
 
       <main className="flex-auto" role="main">
-        <Hero locale={locale} />
-
-        <Testimonials />
+        <Gallery />
       </main>
     </>
   );
