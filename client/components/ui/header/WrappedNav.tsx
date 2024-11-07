@@ -48,7 +48,7 @@ export default function WrappedNav({ translations, locale }: WrappedNavProps) {
       <Nav
         links={links}
         setIsOpen={() => setIsOpen(false)}
-        className="hidden items-center justify-center rounded border bg-background py-2 ~/lg:~space-x-4/8 ~/lg:~px-2/6 md:flex"
+        className="hidden items-center justify-center rounded border bg-background py-2 ~gap-4/12 ~/lg:~px-2/4 md:flex"
       />
 
       <div className="flex items-center justify-center space-x-4">

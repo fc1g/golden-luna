@@ -1,10 +1,10 @@
-import type { Children } from "@/client/types/Children";
-import { useTranslations } from "next-intl";
-import Image, { type StaticImageData } from "next/image";
+import type { Children } from '@/client/types/Children';
+import { useTranslations } from 'next-intl';
+import Image, { type StaticImageData } from 'next/image';
 
 export default function TestimonialsList({ children }: Children) {
   return (
-    <div className="mx-auto grid max-w-screen-xl ~/lg:~mb-8/16 lg:grid-cols-2">
+    <div className="mx-auto grid max-w-screen-xl ~/lg:~mb-8/16 lg:grid-cols-2 2xl:max-w-screen-2xl">
       {children}
     </div>
   );
@@ -16,7 +16,7 @@ type TestimonialProps = {
 };
 
 function Testimonial({ src, username }: TestimonialProps) {
-  const t = useTranslations("homepage.testimonials");
+  const t = useTranslations('homepage.testimonials');
 
   return (
     <figure className="flex flex-col items-center justify-center border-b border-gray-200 bg-primary-foreground text-center ~/md:~p-8/16 dark:border-gray-600 lg:border-r">

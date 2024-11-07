@@ -97,6 +97,44 @@
         "title": "Surrounding",
         "firstPart": "Apartment Golden Luna is located in San Pedro del Pinatar, just 1.8 km from the beaches of Villananitos and La Mota, known for their ideal swimming and snorkeling conditions. La Puntica beach is also nearby, just 2.1 km away. This area is renowned for its scenic hiking trails, numerous cycling routes, and excellent fishing opportunities.",
         "secondPart": "San Pedro del Pinatar is also renowned for its therapeutic mud baths, popular across Europe. The area has many restaurants and shops for a convenient and enjoyable stay. The Region of Murcia International Airport is 35 km away, and Alicante Airport is 75 km from the property."
+      },
+      "rent": {
+        "title": "Rental information",
+        "firstPart": "It's worth mentioning that we are listed on both Booking and Airbnb. If you're not feeling completely confident, you can always book the property through these trusted platforms. However, to save money and enjoy more flexibility, feel free to book directly with us by sending a message or giving us a call to arrange your preferred dates",
+        "secondPart": "Once you are ready to make a reservation, please contact Mrs. Anita Kołodziejczyk. She is responsible for managing your booking and will be available on-site to assist you with every step of the process, ensuring a smooth and pleasant experience."
+      }
+    }
+  },
+  "contacts": {
+    "chart": {
+      "title": "Price Chart",
+      "extra": "Cleaning €80, bed linen €13 per person"
+    },
+    "bookingProcedure": {
+      "title": "Booking Procedure",
+      "subtitle": "How to Book Your Reservation: Step-by-Step Guide",
+      "firstCol": "We’re on Booking.com and Airbnb. For better rates, book directly with us. Check airlines, city, and flight times to plan your dates.",
+      "secondCol": "The client is required to pay 20% of the total booking amount. This payment should be made within 72 hours of booking confirmation.",
+      "thirdCol": "The client must pay 50% of the remaining balance halfway before the arrival date to ensure arrival preparations are completed.",
+      "forthCol": "The remaining amount must be paid the day before arrival and recorded in our account to enable the check-in process."
+    },
+    "list": {
+      "phone": "Phone",
+      "email": "Mail",
+      "important": {
+        "firstPart": "Please be patient;",
+        "secondPart": "each of us, besides renting, has another job."
+      },
+      "firstContact": {
+        "customField": "Address",
+        "trigger": "Still have questions ? Call Monika Nowaczyk",
+        "langPreference": "Ms. Monika speaks Polish, so if you have any questions, it’s better to write in Polish.",
+        "customDataValue": "House"
+      },
+      "secondContact": {
+        "trigger": "For reservations, contact Anita Kolodziejczyk",
+        "customField": "Web page",
+        "langPreference": "Ms. Anita speaks Polish, Spanish, and English, so if you have any questions, it’s better to write."
       }
     }
   },

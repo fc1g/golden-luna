@@ -49,7 +49,7 @@ export default function Hero({ locale }: { locale: Locale }) {
         className="hidden object-cover md:block"
       />
 
-      <div className="relative z-[2] flex w-full flex-col justify-center ~/md:~px-3/6 md:items-center md:text-center">
+      <div className="relative z-[2] flex w-full flex-col items-center justify-center text-center ~/md:~px-3/6">
         <h1
           className={`${locale === 'en' ? '~max-w-72/2xl' : '~max-w-80/3xl'} text-white drop-shadow-lg ~text-xl/5xl md:mt-8`}
         >

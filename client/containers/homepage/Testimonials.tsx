@@ -25,7 +25,7 @@ export default function Testimonials() {
   const t = useTranslations('homepage.testimonials');
 
   return (
-    <section className="pb-8 pt-16 text-center lg:pb-16 lg:pt-24">
+    <section className="pb-8 text-center ~/lg:~pt-16/24 lg:pb-16">
       <Title title={t('title')} subtitle={t('subtitle')} />
 
       <TestimonialsList>

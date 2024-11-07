@@ -6,9 +6,9 @@
   },
   "header": {
     "nav": {
-      "home": "Inicio",
+      "home": "Casa",
       "about": "Acerca de",
-      "surrounding": "Alrededores",
+      "surrounding": "Entorno",
       "contacts": "Contactos"
     },
     "theme": {
@@ -97,6 +97,44 @@
         "title": "Entorno",
         "firstPart": "El apartamento Golden Luna se encuentra en San Pedro del Pinatar, a solo 1,8 km de las playas de Villananitos y La Mota, conocidas por sus excelentes condiciones para nadar y bucear. La playa de La Puntica también está cerca, a solo 2,1 km. Esta zona es famosa por sus rutas escénicas de senderismo, numerosas rutas ciclistas y excelentes oportunidades para la pesca.",
         "secondPart": "San Pedro del Pinatar también es famoso por sus baños de lodo terapéutico, populares en Europa. La zona cuenta con restaurantes y tiendas para una estancia cómoda. El Aeropuerto Internacional de Murcia está a 35 km y el de Alicante a 75 km de la propiedad."
+      },
+      "rent": {
+        "title": "Información sobre el alquiler",
+        "firstPart": "Cabe mencionar que estamos listados tanto en Booking como en Airbnb. Si no te sientes completamente seguro, siempre puedes reservar la propiedad a través de estas plataformas confiables. Sin embargo, para ahorrar dinero y disfrutar de más flexibilidad, no dudes en reservar directamente con nosotros enviando un mensaje o llamándonos para organizar las fechas que prefieras.",
+        "secondPart": "Cuando estés listo para hacer una reserva, por favor contacta a la Sra. Anita Kołodziejczyk. Ella es responsable de gestionar tu reserva y estará disponible en el lugar para ayudarte en cada paso del proceso, asegurando una experiencia fluida y agradable."
+      }
+    }
+  },
+  "contacts": {
+    "chart": {
+      "title": "Tabla de Precios",
+      "extra": "Limpieza €80, sábanas €13 por persona"
+    },
+    "bookingProcedure": {
+      "title": "Procedimiento de Reserva",
+      "subtitle": "Cómo hacer tu reserva: Guía paso a paso",
+      "firstCol": "Estamos disponibles en Booking.com y Airbnb. Para mejores precios, reserva directamente con nosotros. Verifica aerolíneas, ciudad y horarios de vuelo para planificar tus fechas.",
+      "secondCol": "El cliente debe pagar el 20% del monto total de la reserva. Este pago debe realizarse dentro de las 72 horas posteriores a la confirmación de la reserva.",
+      "thirdCol": "El cliente debe pagar el 50% del saldo restante a mitad de camino antes de la fecha de llegada para garantizar que se realicen los preparativos de llegada.",
+      "forthCol": "El saldo restante debe pagarse el día anterior a la llegada y ser registrado en nuestra cuenta para permitir el proceso de check-in."
+    },
+    "list": {
+      "phone": "Teléfono",
+      "email": "Correo electrónico",
+      "important": {
+        "firstPart": "Por favor, ten paciencia;",
+        "secondPart": "cada uno de nosotros, además de alquilar, tiene otro trabajo."
+      },
+      "firstContact": {
+        "customField": "Dirección",
+        "trigger": "¿Aún tienes preguntas? Llama a Monika Nowaczyk",
+        "langPreference": "La señora Monika habla polaco, por lo que si tienes preguntas, es mejor escribir en polaco.",
+        "customDataValue": "Casa"
+      },
+      "secondContact": {
+        "trigger": "Para reservas, contacta a Anita Kołodziejczyk",
+        "customField": "Página web",
+        "langPreference": "La señora Anita habla polaco, español e inglés, por lo que si tienes preguntas, es mejor escribir."
       }
     }
   },

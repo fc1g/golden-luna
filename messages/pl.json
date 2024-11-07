@@ -6,9 +6,9 @@
   },
   "header": {
     "nav": {
-      "home": "Strona główna",
+      "home": "Dom",
       "about": "O nas",
-      "surrounding": "Otoczenie",
+      "surrounding": "Okolica",
       "contacts": "Kontakty"
     },
     "theme": {
@@ -97,6 +97,44 @@
         "title": "Okolica",
         "firstPart": "Apartament Golden Luna znajduje się w San Pedro del Pinatar, zaledwie 1,8 km od plaż Villananitos i La Mota, które są idealne do pływania i nurkowania. Plaża La Puntica znajduje się również w pobliżu, zaledwie 2,1 km stąd. Region ten jest znany z malowniczych szlaków pieszych, licznych tras rowerowych oraz doskonałych warunków do wędkowania.",
         "secondPart": "San Pedro del Pinatar słynie również z leczniczych kąpieli błotnych, popularnych w całej Europie. W okolicy znajduje się wiele restauracji i sklepów, co sprawia, że pobyt jest wygodny i przyjemny. Międzynarodowe lotnisko Regionu Murcji oddalone jest o 35 km, a lotnisko w Alicante o 75 km."
+      },
+      "rent": {
+        "title": "Informacje o wynajmie",
+        "firstPart": "Warto wspomnieć, że jesteśmy dostępni zarówno na Booking, jak i Airbnb. Jeśli nie czujesz się do końca pewnie, zawsze możesz zarezerwować nieruchomość za pośrednictwem tych zaufanych platform. Jednakże, aby zaoszczędzić pieniądze i cieszyć się większą elastycznością, zapraszamy do dokonania rezerwacji bezpośrednio u nas, wysyłając wiadomość lub dzwoniąc, aby ustalić preferowane daty.",
+        "secondPart": "Gdy będziesz gotowy do dokonania rezerwacji, prosimy o kontakt z panią Anitą Kołodziejczyk. Odpowiada ona za zarządzanie Twoją rezerwacją i będzie dostępna na miejscu, aby pomóc w każdym etapie procesu, zapewniając płynność i przyjemne doświadczenie."
+      }
+    }
+  },
+  "contacts": {
+    "chart": {
+      "title": "Cennik",
+      "extra": "Sprzątanie €80, pościel €13 na osobę"
+    },
+    "bookingProcedure": {
+      "title": "Procedura Rezerwacji",
+      "subtitle": "Jak dokonać rezerwacji: Przewodnik krok po kroku",
+      "firstCol": "Jesteśmy dostępni na Booking.com i Airbnb. Aby uzyskać lepsze ceny, rezerwuj bezpośrednio u nas. Sprawdź linie lotnicze, miasto i godziny lotów, aby odpowiednio zaplanować daty.",
+      "secondCol": "Klient zobowiązany jest do zapłaty 20% całkowitej kwoty rezerwacji. Płatność ta powinna zostać dokonana w ciągu 72 godzin od potwierdzenia rezerwacji.",
+      "thirdCol": "Klient musi uiścić 50% pozostałej kwoty na półmetku przed datą przyjazdu, aby zapewnić przygotowania do przyjazdu.",
+      "forthCol": "Pozostała kwota musi zostać zapłacona dzień przed przyjazdem i zaksięgowana na naszym koncie, aby umożliwić proces zameldowania."
+    },
+    "list": {
+      "phone": "Telefon",
+      "email": "E-mail",
+      "important": {
+        "firstPart": "Prosimy o cierpliwość;",
+        "secondPart": "każdy z nas oprócz wynajmu ma inną pracę."
+      },
+      "firstContact": {
+        "customField": "Adres",
+        "trigger": "Masz pytania? Zadzwoń do Moniki Nowaczyk",
+        "langPreference": "Pani Monika mówi po polsku, więc jeśli masz pytania, lepiej pisać po polsku.",
+        "customDataValue": "Dom"
+      },
+      "secondContact": {
+        "trigger": "W sprawie rezerwacji skontaktuj się z Anitą Kołodziejczyk",
+        "customField": "Strona internetowa",
+        "langPreference": "Pani Anita mówi po polsku, hiszpańsku i angielsku, więc jeśli masz pytania, lepiej pisać."
       }
     }
   },

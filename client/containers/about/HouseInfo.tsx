@@ -18,6 +18,10 @@ export default function HouseInfo() {
       value: 'surrounding',
       text: [t('surrounding.firstPart'), t('surrounding.secondPart')],
     },
+    {
+      value: 'rent',
+      text: [t('rent.firstPart'), t('rent.secondPart')],
+    },
   ];
 
   return (
@@ -41,7 +45,7 @@ export default function HouseInfo() {
             value={value}
           >
             {text.map((part, i) => (
-              <p key={i} className="max-w-4xl last:mt-4">
+              <p key={i} className="max-w-4xl last:mt-4 2xl:max-w-6xl">
                 {part}
               </p>
             ))}
