@@ -4,7 +4,8 @@ import ContactsCalendar from './ContactsCalendar';
 
 export default function WrappedCalendar({ locale }: { locale: Locale }) {
   unstable_noStore();
+  const bookedDates: any[] = [];
   // TODO: fetch bookedDates
 
-  return <ContactsCalendar bookedDates={[]} locale={locale} />;
+  return <ContactsCalendar bookedDates={bookedDates} locale={locale} />;
 }

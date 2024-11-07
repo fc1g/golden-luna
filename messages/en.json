@@ -105,6 +105,31 @@
       }
     }
   },
+  "surrounding": {
+    "filters": {
+      "text": "Filters:",
+      "sort": "Sort",
+      "limit": "Limit",
+      "sortTypes": {
+        "low": "Distance: Low to High",
+        "high": "Distance: High to Low"
+      },
+      "limitTypes": {
+        "three": "3 Items on page",
+        "nine": "9 Items on page"
+      }
+    },
+    "pagination": {
+      "previous": "Previous",
+      "previousAria": "Go to previous page",
+      "next": "Next",
+      "nextAria": "Go to next page"
+    },
+    "empty": "This list is empty",
+    "placeMoreInfo": "More info",
+    "placeGenerateRoute": "Generate route",
+    "placeHouse": "House"
+  },
   "contacts": {
     "chart": {
       "title": "Price Chart",
@@ -144,7 +169,6 @@
   "error": {
     "500m": "We are already working to solve the problem",
     "reset": "Reset",
-    "empty": "This list is empty",
     "pity": "Unfortunately, an error occurred",
     "404b": "Back to Homepage",
     "404m": "Something's missing",
