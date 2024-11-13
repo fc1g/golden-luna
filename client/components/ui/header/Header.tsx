@@ -1,4 +1,3 @@
-import '@/client/styles/hamburger.css';
 import { Locale } from '@/server/types/Locale';
 import { useTranslations } from 'next-intl';
 import { Suspense } from 'react';

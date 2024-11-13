@@ -19,7 +19,7 @@ export default function Places({
     <section className="mx-auto max-w-screen-xl px-4 ~/md:~mb-4/8 2xl:max-w-screen-2xl">
       {places ? (
         <>
-          <ul className="mb-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mb-8 grid ~gap-8/16 sm:grid-cols-2 lg:grid-cols-3">
             {places.map(place => (
               <li key={place.id}>
                 <PlaceCard locale={locale} place={place} />

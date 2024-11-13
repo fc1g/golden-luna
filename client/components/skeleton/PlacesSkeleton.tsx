@@ -10,9 +10,9 @@ import { Skeleton } from '../ui/skeleton';
 export default function SurroundingPageSkeleton({ limit }: { limit: number }) {
   return (
     <section className="~/md:~mb-4/8">
-      <div className="mx-auto mb-8 grid max-w-screen-xl gap-8 px-4 sm:grid-cols-2 lg:grid-cols-3 2xl:max-w-screen-2xl">
+      <div className="mx-auto mb-8 grid max-w-screen-xl px-4 ~gap-8/16 sm:grid-cols-2 lg:grid-cols-3 2xl:max-w-screen-2xl">
         {Array.from({ length: limit || 6 }, (_, i) => (
-          <Card className="h-[24.25rem] w-full" key={i}>
+          <Card className="h-[20.25rem] w-full sm:h-[24.25rem]" key={i}>
             <CardHeader>
               <div className="mb-1 font-semibold leading-none tracking-tight">
                 <Skeleton className="h-4 w-32" />
@@ -24,12 +24,12 @@ export default function SurroundingPageSkeleton({ limit }: { limit: number }) {
             </CardHeader>
 
             <CardContent>
-              <Skeleton className="mt-1 h-48 w-full" />
+              <Skeleton className="mt-1 h-32 w-full sm:h-40 md:h-48" />
             </CardContent>
 
             <CardFooter>
-              <Button size="lg" asChild>
-                <Skeleton className="w-[8.85rem]" />
+              <Button asChild>
+                <Skeleton className="w-[6.8rem]" />
               </Button>
             </CardFooter>
           </Card>

@@ -31,19 +31,19 @@ export default function PlaceCard({
         <CardDescription>{subtitle[locale]}</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="relative h-48 w-full">
+        <div className="relative h-32 w-full sm:h-40 md:h-48">
           <Image
-            loading="lazy"
+            priority
             src={image}
             alt={imageAltText[locale]}
             fill
-            sizes="25vw"
-            className="object-cover"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            className="rounded object-cover"
           />
         </div>
       </CardContent>
       <CardFooter>
-        <Button size="lg" asChild>
+        <Button asChild>
           <Link href={`/surrounding/${id}`}>{t('placeMoreInfo')} &darr;</Link>
         </Button>
       </CardFooter>

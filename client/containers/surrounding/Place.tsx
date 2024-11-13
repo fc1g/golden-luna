@@ -2,7 +2,6 @@
 
 import Title from '@/client/components/Title';
 import { Button } from '@/client/components/ui/button';
-import '@/client/styles/leafMap.css';
 import { SurroundingPlace } from '@/client/types/SurroundingPlace';
 import { Locale } from '@/server/types/Locale';
 import { useLocale } from 'next-intl';

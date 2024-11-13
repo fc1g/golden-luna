@@ -1,6 +1,7 @@
 'use client';
 
 import { ICON_COORDS, ICON_SIZE } from '@/client/utils';
+import '@/node_modules/leaflet/dist/leaflet.css';
 import { Icon } from 'leaflet';
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
 
