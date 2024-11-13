@@ -35,7 +35,7 @@ export default function Hero({ locale }: { locale: Locale }) {
       <Image
         src={mobile}
         alt={t('imageAltText')}
-        loading="lazy"
+        priority
         fill
         sizes="(max-width: 600px) 375px, (min-width: 601px) 1280px"
         className="object-cover md:hidden"
@@ -51,7 +51,7 @@ export default function Hero({ locale }: { locale: Locale }) {
 
       <div className="relative z-[2] flex w-full flex-col items-center justify-center text-center ~/md:~px-3/6">
         <h1
-          className={`${locale === 'en' ? '~max-w-72/2xl' : '~max-w-80/3xl'} text-white drop-shadow-lg ~text-xl/5xl md:mt-8`}
+          className={`${locale === 'en' ? '~max-w-60/xl' : '~max-w-72/2xl'} text-white drop-shadow-lg ~text-xl/5xl md:mt-8`}
         >
           {t('title.firstPart')}{' '}
           <span className="text-[#85cbff] drop-shadow-lg">

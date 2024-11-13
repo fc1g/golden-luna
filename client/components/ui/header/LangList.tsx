@@ -1,4 +1,7 @@
+'use client';
+
 import { usePathname } from '@/server/libs/i18n/routing';
+import { Locale } from '@/server/types/Locale';
 import { useLocale } from 'next-intl';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useTransition } from 'react';
@@ -18,7 +21,7 @@ type LangListProps = {
   };
 };
 
-export default function LangList({ langList: { en, pl, es } }: LangListProps) {
+export default function LangList({ langList }: LangListProps) {
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
   const router = useRouter();
@@ -40,28 +43,23 @@ export default function LangList({ langList: { en, pl, es } }: LangListProps) {
         disabled={isPending}
       >
         <Button variant="outline">
-          {localeActive === 'en' ? en : localeActive === 'pl' ? pl : es}
+          {localeActive === 'en'
+            ? langList.en
+            : localeActive === 'pl'
+              ? langList.pl
+              : langList.es}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuItem
-          className="cursor-pointer"
-          onClick={() => changeLocale('en')}
-        >
-          {en}
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          className="cursor-pointer"
-          onClick={() => changeLocale('pl')}
-        >
-          {pl}
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          className="cursor-pointer"
-          onClick={() => changeLocale('es')}
-        >
-          {es}
-        </DropdownMenuItem>
+        {['en', 'pl', 'es'].map(lang => (
+          <DropdownMenuItem
+            key={lang}
+            className="cursor-pointer"
+            onClick={() => changeLocale(lang as Locale)}
+          >
+            {langList[lang as Locale]}
+          </DropdownMenuItem>
+        ))}
       </DropdownMenuContent>
     </DropdownMenu>
   );

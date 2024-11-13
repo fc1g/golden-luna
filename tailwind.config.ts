@@ -6,7 +6,6 @@ const config: Config = {
   darkMode: ['class'],
   content: {
     files: [
-      './pages/**/*.{js,ts,jsx,tsx,mdx}',
       './client/components/**/*.{js,ts,jsx,tsx,mdx}',
       './client/containers/**/*.{js,ts,jsx,tsx,mdx}',
       './app/**/*.{js,ts,jsx,tsx,mdx}',

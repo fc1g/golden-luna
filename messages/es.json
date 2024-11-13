@@ -105,6 +105,33 @@
       }
     }
   },
+  "surrounding": {
+    "filters": {
+      "text": "Filtros:",
+      "sort": "Ordenar",
+      "limit": "Limitar",
+      "sortTypes": {
+        "low": "Distancia: de menor a mayor",
+        "high": "Distancia: de mayor a menor"
+      },
+      "limitTypes": {
+        "three": "3 elementos por página",
+        "nine": "9 elementos por página"
+      }
+    },
+    "pagination": {
+      "previous": "Anterior",
+      "previousAria": "Ir a la página anterior",
+      "next": "Siguiente",
+      "nextAria": "Ir a la página siguiente"
+    },
+    "empty": "Esta lista está vacía",
+    "placeMoreInfo": "Más información",
+    "placeGenerateRoute": "Generar ruta",
+    "placeHouse": "Casa",
+    "enable": "Habilitar",
+    "disable": "Deshabilitar"
+  },
   "contacts": {
     "chart": {
       "title": "Tabla de Precios",

@@ -1,8 +1,11 @@
 'use client';
 
 import { ChevronLeftIcon, ChevronRightIcon } from '@radix-ui/react-icons';
+import dynamic from 'next/dynamic';
 import * as React from 'react';
-import { DayPicker } from 'react-day-picker';
+const DayPicker = dynamic(() =>
+  import('react-day-picker').then(mod => mod.DayPicker),
+);
 
 import { buttonVariants } from '@/client/components/ui/button';
 import { cn } from '@/client/libs/utils';
@@ -44,7 +47,7 @@ function Calendar({
         ),
         day: cn(
           buttonVariants({ variant: 'ghost' }),
-          '~/lg:~w-6/12 ~/lg:~h-6/12 ~p-2/8 font-normal aria-selected:opacity-100',
+          'sm:h-12 h-6 w-6 sm:w-12 md:h-4 lg:h-12 md:w-4 lg:w-12 p-2 md:p-4 lg:p-6 xl:p-8 font-normal aria-selected:opacity-100',
         ),
         day_range_start: 'day-range-start',
         day_range_end: 'day-range-end',

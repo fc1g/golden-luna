@@ -1,17 +1,17 @@
-import ErrorBoundary from '@/client/components/ErrorBoundary';
-import SurroundingPageSkeleton from '@/client/components/skeleton/PlacesSkeleton';
+import Filters from '@/client/containers/surrounding/Filters';
 import { Locale } from '@/server/types/Locale';
 import { useTranslations } from 'next-intl';
 import { Suspense } from 'react';
-import Filters from './Filters';
-import WrappedContent from './WrappedContent';
+import ErrorBoundary from '../../ErrorBoundary';
+import SurroundingPageSkeleton from '../../skeleton/PlacesSkeleton';
+import WrappedPlaces from './WrappedPlaces';
 
 type WrappedSurroundingPageProps = {
   searchParams: URLSearchParams;
   locale: Locale;
 };
 
-export default function WrappedPage({
+export default function WrappedSurroundingPage({
   searchParams,
   locale,
 }: WrappedSurroundingPageProps) {
@@ -50,10 +50,11 @@ export default function WrappedPage({
             />
           }
         >
-          <WrappedContent
-            locale={locale}
-            paginationTranslations={paginationTranslations}
+          <WrappedPlaces
+            translations={paginationTranslations}
+            params={searchParams}
             empty={t('empty')}
+            locale={locale}
           />
         </Suspense>
       </ErrorBoundary>

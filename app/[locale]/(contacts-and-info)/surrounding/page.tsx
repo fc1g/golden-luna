@@ -1,4 +1,4 @@
-import WrappedPage from '@/client/containers/surrounding/WrappedPage';
+import WrappedSurroundingPage from '@/client/components/ui/surrounding/WrappedSurroundingPage';
 import { Params } from '@/client/types/Params';
 import { setRequestLocale } from 'next-intl/server';
 import { ReadonlyURLSearchParams } from 'next/navigation';
@@ -16,5 +16,7 @@ export default async function SurroundingPage({
 
   const currSearchParams = new URLSearchParams(await searchParams);
 
-  return <WrappedPage searchParams={currSearchParams} locale={locale} />;
+  return (
+    <WrappedSurroundingPage searchParams={currSearchParams} locale={locale} />
+  );
 }

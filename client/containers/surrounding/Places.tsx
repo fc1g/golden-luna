@@ -1,7 +1,7 @@
+import PlaceCard from '@/client/components/ui/surrounding/PlaceCard';
 import { Children } from '@/client/types/Children';
 import { SurroundingPlaces } from '@/client/types/SurroundingPlace';
 import { Locale } from '@/server/types/Locale';
-import PlaceCard from './Card';
 
 type PlacesProps = {
   places: SurroundingPlaces[];
@@ -16,7 +16,7 @@ export default function Places({
   children,
 }: PlacesProps) {
   return (
-    <section className="mx-auto max-w-screen-xl px-4 ~/md:~mb-4/8">
+    <section className="mx-auto max-w-screen-xl px-4 ~/md:~mb-4/8 2xl:max-w-screen-2xl">
       {places ? (
         <>
           <ul className="mb-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

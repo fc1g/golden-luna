@@ -1,8 +1,8 @@
-import { Toaster } from "@/client/components/ui/toaster";
-import { Children } from "@/client/types/Children";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
-import { ThemeProvider } from "./theme-provider";
+import { Toaster } from '@/client/components/ui/toaster';
+import { Children } from '@/client/types/Children';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { ThemeProvider } from './theme-provider';
 
 export default async function Providers({ children }: Children) {
   const messages = await getMessages();
@@ -18,7 +18,7 @@ export default async function Providers({ children }: Children) {
         <>
           <Toaster />
 
-          <div className="wrapper">{children}</div>
+          <div className="flex min-h-full flex-col">{children}</div>
         </>
       </ThemeProvider>
     </NextIntlClientProvider>

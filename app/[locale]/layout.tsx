@@ -5,11 +5,8 @@ import { routing } from '@/server/libs/i18n/routing';
 import { Locale } from '@/server/types/Locale';
 import { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import Providers from '../(providers)/providers';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }));
@@ -39,7 +36,7 @@ export default async function RootLayout({
 
   return (
     <html className="h-full" lang={locale} suppressHydrationWarning>
-      <body className={`${inter.className} h-full antialiased`}>
+      <body className="h-full">
         <Providers>
           {children}
 

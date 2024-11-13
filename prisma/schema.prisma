@@ -13,7 +13,7 @@ model BookedDate {
   deadlineDate  String
 }
 
-model SurroundingPlace {
+model Place {
   id                String    @id @default(auto()) @map("_id") @db.ObjectId
   image             Bytes
   routeLink         String
@@ -40,7 +40,7 @@ model Title {
   en                  String
   pl                  String
   es                  String
-  surroundingPlaces   SurroundingPlace[]
+  Places   Place[]
 }
 
 model Subtitle {
@@ -48,7 +48,7 @@ model Subtitle {
   en                  String
   pl                  String
   es                  String
-  surroundingPlaces   SurroundingPlace[]
+  Places   Place[]
 }
 
 model Description {
@@ -56,7 +56,7 @@ model Description {
   en                  String
   pl                  String
   es                  String
-  surroundingPlaces   SurroundingPlace[]
+  Places   Place[]
 }
 
 model ImageAltText {
@@ -64,12 +64,12 @@ model ImageAltText {
   en                  String
   pl                  String
   es                  String
-  surroundingPlaces   SurroundingPlace[]
+  Places   Place[]
 }
 
 model Coords {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   lat  Float
   lng Float
-  surroundingPlaces   SurroundingPlace[]
+  Places   Place[]
 }

@@ -128,7 +128,9 @@
     "empty": "This list is empty",
     "placeMoreInfo": "More info",
     "placeGenerateRoute": "Generate route",
-    "placeHouse": "House"
+    "placeHouse": "House",
+    "enable": "Enable",
+    "disable": "Disable"
   },
   "contacts": {
     "chart": {

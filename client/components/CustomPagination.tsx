@@ -36,6 +36,8 @@ export default function CustomPagination({
   const limit = Number(searchParams.get('limit')) || 6;
   const maxPage = Math.ceil(results / limit);
 
+  const navLimit = 3;
+
   const buildLink = useCallback(
     (newPage: number) => {
       searchParams.set('page', String(newPage));
@@ -64,7 +66,7 @@ export default function CustomPagination({
           />
         </PaginationItem>
 
-        {currPage > 2 && (
+        {currPage > 2 && maxPage > navLimit && (
           <PaginationItem>
             <PaginationEllipsis />
           </PaginationItem>
@@ -85,7 +87,7 @@ export default function CustomPagination({
           else return '';
         })}
 
-        {currPage < maxPage - 1 && (
+        {currPage < maxPage - 1 && maxPage > navLimit && (
           <PaginationItem>
             <PaginationEllipsis />
           </PaginationItem>

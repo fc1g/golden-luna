@@ -23,9 +23,9 @@ export default function ContactsCalendar({
 }: ContactsCalendarProps) {
   const memoizedDates = useMemo(
     () =>
-      bookedDates.map(item => ({
-        from: new Date(item.initialDate),
-        to: new Date(item.deadlineDate),
+      bookedDates.map(({ initialDate, deadlineDate }) => ({
+        from: new Date(initialDate),
+        to: new Date(deadlineDate),
       })),
     [bookedDates],
   );

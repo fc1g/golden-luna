@@ -9,7 +9,8 @@ import {
   ChartTooltipContent,
 } from '@/client/components/ui/chart';
 import { getPrice } from '@/client/services/getPrice';
-import { type Locale } from '@/server/types/Locale';
+import { CHART_PRICE_COLOR } from '@/client/utils';
+import { Locale } from '@/server/types/Locale';
 import { format } from 'date-fns';
 import { enUS, es, pl } from 'date-fns/locale';
 import { useMemo } from 'react';
@@ -18,7 +19,7 @@ import { Bar, BarChart, CartesianGrid, LabelList } from 'recharts';
 const chartConfig: ChartConfig = {
   price: {
     label: 'Price',
-    color: '#2563eb',
+    color: CHART_PRICE_COLOR,
   },
 };
 
@@ -40,7 +41,7 @@ export default function PriceChart({ locale }: { locale: Locale }) {
   );
 
   return (
-    <ChartContainer config={chartConfig} className="min-h-40 w-full">
+    <ChartContainer config={chartConfig} className="min-h-[11.25rem] w-full">
       <BarChart data={chartData} accessibilityLayer>
         <CartesianGrid vertical={false} />
         <ChartTooltip content={<ChartTooltipContent />} />

@@ -1,7 +1,6 @@
-"use client";
+'use client';
 
-import { Button } from "@/client/components/ui/button";
-import { useTranslations } from "next-intl";
+import { Button } from '@/client/components/ui/button';
 
 type ErrorProps = {
   error: Error;
@@ -9,17 +8,15 @@ type ErrorProps = {
 };
 
 export default function Error({ error, reset }: ErrorProps) {
-  const t = useTranslations("error");
-
   return (
     <section role="alert" className="flex flex-1 items-center justify-center">
       <div className="text-center">
         <p className="mb-4 text-3xl font-bold tracking-tight text-secondary-foreground md:text-4xl">
-          {`${t("pity")}: ${error.message}`}
+          {error.message}
         </p>
 
         <Button onClick={() => reset()} variant="default" size="lg">
-          {t("reset")}
+          Reset
         </Button>
       </div>
     </section>

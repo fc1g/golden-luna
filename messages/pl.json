@@ -105,6 +105,33 @@
       }
     }
   },
+  "surrounding": {
+    "filters": {
+      "text": "Filtry:",
+      "sort": "Sortuj",
+      "limit": "Limit",
+      "sortTypes": {
+        "low": "Odległość: rosnąco",
+        "high": "Odległość: malejąco"
+      },
+      "limitTypes": {
+        "three": "3 przedmioty na stronie",
+        "nine": "9 przedmiotów na stronie"
+      }
+    },
+    "pagination": {
+      "previous": "Poprzednia",
+      "previousAria": "Przejdź do poprzedniej strony",
+      "next": "Następna",
+      "nextAria": "Przejdź do następnej strony"
+    },
+    "empty": "Ta lista jest pusta",
+    "placeMoreInfo": "Więcej informacji",
+    "placeGenerateRoute": "Generuj trasę",
+    "placeHouse": "Dom",
+    "enable": "Włącz",
+    "disable": "Wyłącz"
+  },
   "contacts": {
     "chart": {
       "title": "Cennik",

@@ -2,7 +2,9 @@
 
 import Title from '@/client/components/Title';
 import { Button } from '@/client/components/ui/button';
+import '@/client/styles/leafMap.css';
 import { SurroundingPlace } from '@/client/types/SurroundingPlace';
+import '@/node_modules/leaflet/dist/leaflet.css';
 import { Locale } from '@/server/types/Locale';
 import { useLocale } from 'next-intl';
 import dynamic from 'next/dynamic';
@@ -13,15 +15,22 @@ type PlaceProps = {
   routeText: string;
   houseText: string;
   place: SurroundingPlace;
+  enable: string;
+  disable: string;
 };
 
-const LeafletMap = dynamic(() => import('./LeafMap'), {
-  ssr: false,
-});
+const LeafletMap = dynamic(
+  () => import('@/client/components/ui/surrounding/LeafMap'),
+  {
+    ssr: false,
+  },
+);
 
 export default function Place({
   routeText,
   houseText,
+  enable,
+  disable,
   place: { title, description, imageAltText, routeLink, coords, image },
 }: PlaceProps) {
   const activeLocale = useLocale() as Locale;
@@ -44,27 +53,28 @@ export default function Place({
         </div>
 
         <div className="flex flex-col items-center justify-center">
-          <Title title={title[activeLocale]} subtitle="" />
+          <Title
+            title={title[activeLocale]}
+            subtitle={description[activeLocale]}
+          />
 
-          <p className="-mt-6 text-secondary-foreground ~/lg:~mb-3/6">
-            {description[activeLocale]}
-          </p>
-
-          <Button variant="default" size="lg" asChild>
-            <a target="_blank" href={routeLink}>
-              <Button variant="link">{routeText} &rarr;</Button>
-            </a>
-          </Button>
+          <a className="~-mt-0/8" target="_blank" href={routeLink}>
+            <Button variant="link">{routeText} &rarr;</Button>
+          </a>
         </div>
       </div>
 
-      <div className={`map-container ${isLoaded ? 'loaded' : ''}`}>
-        <LeafletMap
-          coords={[coords.lat, coords.lng]}
-          houseText={houseText}
-          title={title[activeLocale]}
-        />
-      </div>
+      {isLoaded && (
+        <div className="map-container loaded ~mb-8/16">
+          <LeafletMap
+            enable={enable}
+            disable={disable}
+            coords={[coords.lat, coords.lng]}
+            houseText={houseText}
+            title={title[activeLocale]}
+          />
+        </div>
+      )}
     </section>
   );
 }

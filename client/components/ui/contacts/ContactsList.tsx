@@ -5,37 +5,63 @@ import {
   AccordionTrigger,
 } from '@/client/components/ui/accordion';
 import { Button } from '@/client/components/ui/button';
-import { useTranslations } from 'next-intl';
 import { MdEmail, MdOutlineMap, MdPhone, MdWeb } from 'react-icons/md';
 
-export default function ContactsList() {
-  const t = useTranslations('contacts.list');
+type ContactsListProps = {
+  translations: {
+    phoneText: string;
+    emailText: string;
+    importantFirstPart: string;
+    importantSecondPart: string;
+    mainContact: {
+      trigger: string;
+      customField: string;
+      customDataValue: string;
+      langPreference: string;
+    };
+    supportContact: {
+      trigger: string;
+      customField: string;
+      langPreference: string;
+    };
+  };
+};
 
+export default function ContactsList({
+  translations: {
+    phoneText,
+    emailText,
+    importantFirstPart,
+    importantSecondPart,
+    mainContact,
+    supportContact,
+  },
+}: ContactsListProps) {
   const data = [
     {
       id: 'item-1',
-      trigger: t('firstContact.trigger'),
+      trigger: mainContact.trigger,
       phone: '+48 608 072 786',
       email: 'GoldenLuna@wp.pl',
-      customField: t('firstContact.customField'),
+      customField: mainContact.customField,
       customDataKey: 'https://maps.app.goo.gl/Fr8FTownycwkHqcR6',
-      customDataValue: t('firstContact.customDataValue'),
-      langPreference: t('firstContact.langPreference'),
+      customDataValue: mainContact.customDataValue,
+      langPreference: mainContact.langPreference,
     },
     {
       id: 'item-2',
-      trigger: t('secondContact.trigger'),
+      trigger: supportContact.trigger,
       phone: '+34 659 901 386',
       email: 'Info@avsinmo.com',
-      customField: t('secondContact.customField'),
+      customField: supportContact.customField,
       customDataKey: 'https://www.avsinmo.com/',
       customDataValue: 'Avsinmo.com',
-      langPreference: t('secondContact.langPreference'),
+      langPreference: supportContact.langPreference,
     },
   ];
 
   return (
-    <section className="mx-auto mb-8 max-w-screen-xl px-2 2xl:max-w-screen-2xl">
+    <section className="mx-auto max-w-screen-xl px-2 ~/md:~mb-8/16 2xl:max-w-screen-2xl">
       <Accordion type="single" collapsible>
         {data.map(
           ({
@@ -49,7 +75,9 @@ export default function ContactsList() {
             langPreference,
           }) => (
             <AccordionItem key={id} value={id}>
-              <AccordionTrigger>{trigger}</AccordionTrigger>
+              <AccordionTrigger className="rounded px-2 focus:outline-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
+                {trigger}
+              </AccordionTrigger>
               <AccordionContent>
                 <div className="mb-2 text-center text-muted-foreground lg:text-left">
                   <ul className="flex flex-col items-center justify-center space-y-6 p-3 sm:flex-row sm:space-x-8 sm:space-y-0">
@@ -60,10 +88,11 @@ export default function ContactsList() {
 
                       <div className="border-border">
                         <h3 className="text-left text-lg font-semibold text-secondary-foreground">
-                          {t('phone')}:
+                          {phoneText}:
                         </h3>
                         <a
-                          className="text-primary-600 dark:text-primary-300 text-left text-xs md:text-sm"
+                          tabIndex={-1}
+                          className="text-primary-600 dark:text-primary-300 text-left text-xs focus:outline-none md:text-sm"
                           href={`tel:${phone}`}
                         >
                           <Button variant="link" size={null}>
@@ -79,10 +108,11 @@ export default function ContactsList() {
                       </div>
                       <div className="border-border">
                         <h3 className="text-left text-lg font-semibold text-secondary-foreground">
-                          {t('email')}:
+                          {emailText}:
                         </h3>
                         <a
-                          className="text-left text-xs text-primary md:text-sm"
+                          tabIndex={-1}
+                          className="text-left text-xs text-primary focus:outline-none md:text-sm"
                           href={`mailto:${email}`}
                         >
                           <Button variant="link" size={null}>
@@ -94,7 +124,7 @@ export default function ContactsList() {
 
                     <li className="flex w-44 space-x-2 sm:flex-1">
                       <div className="rounded-xl bg-muted p-4">
-                        {customField === t('firstContact.customField') ? (
+                        {customField === mainContact.customField ? (
                           <MdOutlineMap className="size-6 text-secondary-foreground" />
                         ) : (
                           <MdWeb className="size-6 text-secondary-foreground" />
@@ -106,8 +136,9 @@ export default function ContactsList() {
                           {customField}:
                         </h3>
                         <a
+                          tabIndex={-1}
                           target="_blank"
-                          className="text-left text-xs text-primary md:text-sm"
+                          className="text-left text-xs text-primary focus:outline-none md:text-sm"
                           href={customDataKey}
                         >
                           <Button variant="link" size={null}>
@@ -126,9 +157,9 @@ export default function ContactsList() {
                 <p className="text-center text-xs text-muted-foreground sm:text-sm">
                   <strong>
                     <span className="text-red-800 dark:text-red-300">
-                      {t('important.firstPart')}
+                      {importantFirstPart}
                     </span>{' '}
-                    {t('important.secondPart')}
+                    {importantSecondPart}
                   </strong>
                 </p>
               </AccordionContent>
