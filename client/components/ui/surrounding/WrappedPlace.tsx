@@ -1,4 +1,5 @@
 import Place from '@/client/containers/surrounding/Place';
+import '@/node_modules/leaflet/dist/leaflet.css';
 import { fetchPlace } from '@/server/actions/surrounding/fetchPlace';
 import { getTranslations } from 'next-intl/server';
 

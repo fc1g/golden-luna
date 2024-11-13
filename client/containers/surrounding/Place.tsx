@@ -4,7 +4,6 @@ import Title from '@/client/components/Title';
 import { Button } from '@/client/components/ui/button';
 import '@/client/styles/leafMap.css';
 import { SurroundingPlace } from '@/client/types/SurroundingPlace';
-import '@/node_modules/leaflet/dist/leaflet.css';
 import { Locale } from '@/server/types/Locale';
 import { useLocale } from 'next-intl';
 import dynamic from 'next/dynamic';
