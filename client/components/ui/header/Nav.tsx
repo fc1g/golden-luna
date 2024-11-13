@@ -11,16 +11,17 @@ type NavProps = {
     contacts: string;
   };
   className: string;
+  onClick: () => void;
   children?: React.ReactNode;
 };
 
-export default function Nav({ className, links, children }: NavProps) {
+export default function Nav({ className, links, children, onClick }: NavProps) {
   const pathname = usePathname();
 
   return (
     <ul aria-label="navigation" className={`${className} rounded-lg`}>
       {navLinks.map(link => (
-        <li className="group rounded" key={link.label}>
+        <li onClick={onClick} className="group rounded" key={link.label}>
           <Link
             className={`block rounded px-2 transition duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring group-hover:text-primary ${pathname === link.href ? 'text-primary' : ''}`}
             href={link.href}

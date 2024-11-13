@@ -1,32 +1,31 @@
 'use client';
 
-import { Children } from '@/client/types/Children';
 import { Locale } from '@/server/types/Locale';
-import { useState } from 'react';
 
 type HamburgerProps = {
+  isOpen: boolean;
+  onClick: () => void;
   hamburger: {
     close: string;
     open: string;
     label: string;
   };
   locale: Locale;
-} & Children;
+};
 
 export default function Hamburger({
+  isOpen,
+  onClick,
   hamburger: { open, close, label },
   locale,
-  children,
 }: HamburgerProps) {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
       <button
         aria-label={isOpen ? close : open}
         aria-expanded={isOpen}
         type="button"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={onClick}
         className={`hamburger z-30 block md:hidden ${isOpen ? 'open' : ''}`}
       >
         <span className="hamburger-top" />
@@ -36,12 +35,6 @@ export default function Hamburger({
           {label}
         </span>
       </button>
-
-      <div
-        className={`${isOpen ? 'absolute inset-x-0 top-0 z-40 mt-12' : 'hidden'}`}
-      >
-        {children}
-      </div>
     </>
   );
 }
