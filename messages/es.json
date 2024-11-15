@@ -91,7 +91,7 @@
       "house": {
         "title": "Casa",
         "firstPart": "El apartamento Golden Luna es un alojamiento moderno y elegante con dos habitaciones, una sala de estar y una cocina totalmente equipada, que incluye refrigerador y cafetera. Cuenta con dos baños con duchas y secadores de pelo, aire acondicionado para mayor comodidad en días calurosos y una terraza que da a un exuberante jardín, perfecto para relajarse.",
-        "secondPart": "Los huéspedes disfrutan de Wi-Fi, estacionamiento en garaje y espacios de estacionamiento disponibles frente al edificio. Para los huéspedes activos, el complejo ofrece acceso a una cancha de squash, una piscina y un área verde en el jardín. El personal habla inglés, español y francés."
+        "secondPart": "Los huéspedes disponen de Wi-Fi, aparcamiento en garaje y plazas de aparcamiento frente al edificio. Para los huéspedes activos, el complejo de apartamentos ofrece acceso a una cancha de squash, una piscina y una zona de jardín verde. El personal habla inglés, español y polaco."
       },
       "surrounding": {
         "title": "Entorno",
@@ -155,7 +155,7 @@
       "firstContact": {
         "customField": "Dirección",
         "trigger": "¿Aún tienes preguntas? Llama a Monika Nowaczyk",
-        "langPreference": "La señora Monika habla polaco, por lo que si tienes preguntas, es mejor escribir en polaco.",
+        "langPreference": "La Sra. Monika habla polaco e inglés, así que si tienes alguna pregunta, es mejor escribir.",
         "customDataValue": "Casa"
       },
       "secondContact": {

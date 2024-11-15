@@ -91,7 +91,7 @@
       "house": {
         "title": "Dom",
         "firstPart": "Apartament Golden Luna to stylowy i nowoczesny apartament z dwiema sypialniami, salonem oraz w pełni wyposażoną kuchnią, w której znajdują się lodówka i ekspres do kawy. Posiada dwie łazienki z prysznicami i suszarkami do włosów, klimatyzację zapewniającą komfort w ciepłe dni oraz taras wychodzący na bujny ogród, idealny do relaksu.",
-        "secondPart": "Goście mogą korzystać z Wi-Fi, parkingu w garażu i miejsc parkingowych przed budynkiem. Dla aktywnych gości kompleks oferuje dostęp do kortu do squasha, basenu oraz zielonego ogrodu. Obsługa mówi po angielsku, hiszpańsku i francusku."
+        "secondPart": "Goście mają do dyspozycji Wi-Fi, garaż oraz miejsca parkingowe przed budynkiem. Dla aktywnych gości kompleks apartamentów oferuje dostęp do kortu do squasha, basenu oraz zielonego ogrodu. Personel mówi po angielsku, hiszpańsku i polsku."
       },
       "surrounding": {
         "title": "Okolica",
@@ -155,7 +155,7 @@
       "firstContact": {
         "customField": "Adres",
         "trigger": "Masz pytania? Zadzwoń do Moniki Nowaczyk",
-        "langPreference": "Pani Monika mówi po polsku, więc jeśli masz pytania, lepiej pisać po polsku.",
+        "langPreference": "Pani Monika mówi po polsku i angielsku, więc jeśli masz jakieś pytania, lepiej napisać.",
         "customDataValue": "Dom"
       },
       "secondContact": {

@@ -91,7 +91,7 @@
       "house": {
         "title": "House",
         "firstPart": "Apartment Golden Luna is a stylish and modern apartment with two bedrooms, a living room, and a fully equipped kitchen that includes a refrigerator and coffee maker. It features two bathrooms with showers and hairdryers, air conditioning for comfort during warm days, and a terrace that opens up to a lush garden, perfect for relaxation.",
-        "secondPart": "Guests benefit from Wi-Fi, garage parking, and parking spaces available in front of the building. For active guests, the apartment complex offers access to a squash court, a swimming pool, and a green garden area. The staff speaks English, Spanish, and French."
+        "secondPart": "Guests benefit from Wi-Fi, garage parking, and parking spaces available in front of the building. For active guests, the apartment complex offers access to a squash court, a swimming pool, and a green garden area. The staff speaks English, Spanish, and Polish."
       },
       "surrounding": {
         "title": "Surrounding",
@@ -155,7 +155,7 @@
       "firstContact": {
         "customField": "Address",
         "trigger": "Still have questions ? Call Monika Nowaczyk",
-        "langPreference": "Ms. Monika speaks Polish, so if you have any questions, it’s better to write in Polish.",
+        "langPreference": "Ms. Monika speaks Polish and English, so if you have any questions, it’s better to write",
         "customDataValue": "House"
       },
       "secondContact": {
