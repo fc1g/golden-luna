@@ -130,7 +130,9 @@
     "placeGenerateRoute": "Generuj trasę",
     "placeHouse": "Dom",
     "enable": "Włącz",
-    "disable": "Wyłącz"
+    "disable": "Wyłącz",
+    "from": "Od",
+    "to": "Do"
   },
   "contacts": {
     "chart": {
@@ -163,6 +165,20 @@
         "customField": "Strona internetowa",
         "langPreference": "Pani Anita mówi po polsku, hiszpańsku i angielsku, więc jeśli masz pytania, lepiej pisać."
       }
+    }
+  },
+  "admin": {
+    "calendar": {
+      "initialDate": {
+        "title": "dataPoczątkowa",
+        "description": "To jest początkowa data zarezerwowanego terminu"
+      },
+      "deadlineDate": {
+        "title": "dataKońcowa",
+        "description": "To jest końcowa data zarezerwowanego terminu"
+      },
+      "submit": "Zatwierdź",
+      "submitting": "Zatwierdzanie"
     }
   },
   "footer": {

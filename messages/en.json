@@ -167,6 +167,20 @@
       }
     }
   },
+  "admin": {
+    "calendar": {
+      "initialDate": {
+        "title": "initialdDate",
+        "description": "This is initial date of booked date"
+      },
+      "deadlineDate": {
+        "title": "deadlineDate",
+        "description": "This is deadline date of booked date"
+      },
+      "submit": "Submit",
+      "submitting": "Submitting"
+    }
+  },
   "footer": {
     "copyrights": "All Rights Reserverd. Built with"
   },

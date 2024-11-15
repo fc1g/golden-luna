@@ -130,7 +130,9 @@
     "placeGenerateRoute": "Generar ruta",
     "placeHouse": "Casa",
     "enable": "Habilitar",
-    "disable": "Deshabilitar"
+    "disable": "Deshabilitar",
+    "from": "Desde",
+    "to": "Hasta"
   },
   "contacts": {
     "chart": {
@@ -163,6 +165,20 @@
         "customField": "Página web",
         "langPreference": "La señora Anita habla polaco, español e inglés, por lo que si tienes preguntas, es mejor escribir."
       }
+    }
+  },
+  "admin": {
+    "calendar": {
+      "initialDate": {
+        "title": "fechaInicial",
+        "description": "Esta es la fecha inicial de la reserva"
+      },
+      "deadlineDate": {
+        "title": "fechaLímite",
+        "description": "Esta es la fecha límite de la reserva"
+      },
+      "submit": "Enviar",
+      "submitting": "Enviando"
     }
   },
   "footer": {

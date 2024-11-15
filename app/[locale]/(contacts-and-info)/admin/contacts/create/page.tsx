@@ -1,25 +1,24 @@
 import WrappedAdminContactsCreatePage from '@/client/components/ui/admin/contacts/WrappedAdminContactsCreatePage';
 import { Params } from '@/client/types/Params';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 export default async function AdminContactsCreatePage({ params }: Params) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  // TODO:
-  // const t = await getTranslations('admin.calendar');
+  const t = await getTranslations('admin.calendar');
 
   const translation = {
     initialDate: {
-      title: 'initialdDate',
-      description: 'This is initial date of booked date',
+      title: t('initialDate.title'),
+      description: t('initialDate.description'),
     },
     deadlineDate: {
-      title: 'deadlineDate',
-      description: 'This is deadline date of booked date',
+      title: t('deadlineDate.title'),
+      description: t('deadlineDate.description'),
     },
-    submit: 'Submit',
-    submitting: 'Submitting',
+    submit: t('submit'),
+    submitting: t('submitting'),
   };
 
   return (
