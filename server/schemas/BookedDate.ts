@@ -5,7 +5,13 @@ export const bookedDateSchema = z
     initialDate: z.string().date(),
     deadlineDate: z.string().date(),
   })
-  .refine(date => new Date(date.initialDate) < new Date(date.deadlineDate), {
-    message: 'initial date must be earlier than deadline date',
-    path: ['deadlineDate'],
-  });
+  .refine(
+    ({ initialDate, deadlineDate }) =>
+      new Date(initialDate) < new Date(deadlineDate),
+    {
+      message: 'initial date must be earlier than deadline date',
+      path: ['deadlineDate'],
+    },
+  );
+
+export type FormFields = z.infer<typeof bookedDateSchema>;

@@ -130,7 +130,9 @@
     "placeGenerateRoute": "Generate route",
     "placeHouse": "House",
     "enable": "Enable",
-    "disable": "Disable"
+    "disable": "Disable",
+    "from": "From",
+    "to": "To"
   },
   "contacts": {
     "chart": {

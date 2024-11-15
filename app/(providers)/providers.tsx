@@ -1,4 +1,3 @@
-import { Toaster } from '@/client/components/ui/toaster';
 import { Children } from '@/client/types/Children';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -15,11 +14,7 @@ export default async function Providers({ children }: Children) {
         enableSystem
         disableTransitionOnChange
       >
-        <>
-          <Toaster />
-
-          <div className="flex min-h-full flex-col">{children}</div>
-        </>
+        <div className="flex h-full min-h-screen flex-col">{children}</div>
       </ThemeProvider>
     </NextIntlClientProvider>
   );
