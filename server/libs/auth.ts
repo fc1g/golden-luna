@@ -16,19 +16,23 @@ const authConfig = {
       clientSecret: AUTH_GOOGLE_SECRET,
     }),
   ],
+  pages: {
+    signIn: '/api/auth/signin',
+  },
   callbacks: {
-    pages: {
-      signIn: '/api/auth/signin',
-    },
     async signIn({ user }: { user: User }) {
       if (allowedEmails.includes(user.email || '')) {
         return true;
-      } else {
-        return false;
       }
+
+      console.warn(`Access denied for user: ${user.email}`);
+      return false;
     },
-    authorized: async ({ auth }: { auth: Session | null }) => {
-      return !!auth;
+    async session({ session }: { session: Session }) {
+      return session;
+    },
+    async jwt({ token }: { token: any }) {
+      return token;
     },
   },
   trustHost: true,

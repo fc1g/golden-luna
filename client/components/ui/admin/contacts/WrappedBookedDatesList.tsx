@@ -17,6 +17,7 @@ export default function WrappedBookedDatesList({
     empty: t('empty'),
     from: t('from'),
     to: t('to'),
+    deleteQuestion: t('deleteDate'),
     pagination: {
       prevLabel: t('pagination.previous'),
       nextLabel: t('pagination.next'),

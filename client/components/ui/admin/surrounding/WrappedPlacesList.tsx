@@ -15,6 +15,7 @@ export default function WrappedPlacesList({
 
   const translations = {
     empty: t('empty'),
+    deleteQuestion: t('deletePlace'),
     pagination: {
       prevLabel: t('pagination.previous'),
       nextLabel: t('pagination.next'),

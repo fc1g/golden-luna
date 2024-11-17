@@ -126,6 +126,8 @@
       "nextAria": "Go to next page"
     },
     "empty": "This list is empty",
+    "deletePlace": "Are you sure, you want to delete this surrounding place?",
+    "deleteDate": "Are you sure, you want to delete this booked date?",
     "placeMoreInfo": "More info",
     "placeGenerateRoute": "Generate route",
     "placeHouse": "House",

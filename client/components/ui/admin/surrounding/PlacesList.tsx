@@ -17,6 +17,7 @@ type PlacesListProps = {
   results: number;
   translations: {
     empty: string;
+    deleteQuestion: string;
     pagination: {
       prevLabel: string;
       nextLabel: string;
@@ -29,7 +30,7 @@ type PlacesListProps = {
 export default function PlacesList({
   data,
   results,
-  translations: { pagination, empty },
+  translations: { pagination, empty, deleteQuestion },
 }: PlacesListProps) {
   const activeLocale = useLocale() as Locale;
   const searchParams = new URLSearchParams(useSearchParams());
@@ -48,8 +49,7 @@ export default function PlacesList({
   );
 
   async function deleteHandler(id: string) {
-    // TODO:
-    const decision = confirm('Are you sure, you want to delete this place ?');
+    const decision = confirm(deleteQuestion);
     if (!decision) return;
 
     startTransition(() => {

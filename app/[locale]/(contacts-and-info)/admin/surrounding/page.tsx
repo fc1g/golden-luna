@@ -1,6 +1,6 @@
 import ErrorBoundary from '@/client/components/ErrorBoundary';
+import AdminSurroundingPageSkeleton from '@/client/components/skeleton/AdminSurroundingPageSkeleton';
 import WrappedAdminSurroundingPage from '@/client/components/ui/admin/surrounding/WrappedAdminSurroundingPage';
-import { Skeleton } from '@/client/components/ui/skeleton';
 import { Params } from '@/client/types/Params';
 import { auth } from '@/server/libs/auth';
 import { redirect } from '@/server/libs/i18n/routing';
@@ -26,8 +26,7 @@ export default async function AdminSurroundingPage({
   return (
     <div className="my-12 md:my-24">
       <ErrorBoundary>
-        {/* TODO: */}
-        <Suspense fallback={<Skeleton />}>
+        <Suspense fallback={<AdminSurroundingPageSkeleton />}>
           <WrappedAdminSurroundingPage
             searchParams={new URLSearchParams(currSearchParams)}
           />
