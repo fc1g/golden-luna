@@ -1,20 +1,20 @@
 import ErrorBoundary from '@/client/components/ErrorBoundary';
-import AdminContactsPageSkeleton from '@/client/components/skeleton/AdminContactsPageSkeleton';
-import WrappedAdminContactsPage from '@/client/components/ui/admin/contacts/WrappedAdminContactsPage';
+import WrappedAdminSurroundingPage from '@/client/components/ui/admin/surrounding/WrappedAdminSurroundingPage';
+import { Skeleton } from '@/client/components/ui/skeleton';
 import { Params } from '@/client/types/Params';
 import { auth } from '@/server/libs/auth';
 import { redirect } from '@/server/libs/i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
 import { Suspense } from 'react';
 
-type AdminContactsPageProps = {
+type AdminSurroundingPageProps = {
   searchParams: Promise<URLSearchParams>;
 } & Params;
 
-export default async function AdminContactsPage({
+export default async function AdminSurroundingPage({
   searchParams,
   params,
-}: AdminContactsPageProps) {
+}: AdminSurroundingPageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 
@@ -26,8 +26,9 @@ export default async function AdminContactsPage({
   return (
     <div className="my-12 md:my-24">
       <ErrorBoundary>
-        <Suspense fallback={<AdminContactsPageSkeleton />}>
-          <WrappedAdminContactsPage
+        {/* TODO: */}
+        <Suspense fallback={<Skeleton />}>
+          <WrappedAdminSurroundingPage
             searchParams={new URLSearchParams(currSearchParams)}
           />
         </Suspense>

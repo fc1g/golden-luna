@@ -2,6 +2,8 @@ import WrappedAdminContactsUpdatePage from '@/client/components/ui/admin/contact
 import { Params } from '@/client/types/Params';
 import { fetchDate } from '@/server/actions/bookedDates/fetchDate';
 import { fetchDatesStaticParams } from '@/server/actions/bookedDates/fetchDatesStaticParams';
+import { auth } from '@/server/libs/auth';
+import { redirect } from '@/server/libs/i18n/routing';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 export const generateStaticParams = async () => {
@@ -14,19 +16,16 @@ export default async function AdminContactsUpdatePage({ params }: Params) {
   const { locale, id } = await params;
   setRequestLocale(locale);
 
+  const session = await auth();
+  if (!session) redirect({ href: '/', locale });
+
   const bookedDate = await fetchDate(id!);
 
   const t = await getTranslations('admin.calendar');
 
   const translation = {
-    initialDate: {
-      title: t('initialDate.title'),
-      description: t('initialDate.description'),
-    },
-    deadlineDate: {
-      title: t('deadlineDate.title'),
-      description: t('deadlineDate.description'),
-    },
+    initialDate: t('initialDate'),
+    deadlineDate: t('deadlineDate'),
     submit: t('submit'),
     submitting: t('submitting'),
   };
@@ -35,8 +34,6 @@ export default async function AdminContactsUpdatePage({ params }: Params) {
     <WrappedAdminContactsUpdatePage
       bookedDate={bookedDate}
       translations={translation}
-      id={id!}
-      locale={locale}
     />
   );
 }

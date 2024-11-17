@@ -169,16 +169,25 @@
   },
   "admin": {
     "calendar": {
-      "initialDate": {
-        "title": "dataPoczątkowa",
-        "description": "To jest początkowa data zarezerwowanego terminu"
+      "initialDate": "Data początkowa",
+      "deadlineDate": "Data końcowa",
+      "submit": "Wyślij",
+      "submitting": "Wysyłanie"
+    },
+    "surrounding": {
+      "title": "Tytuł",
+      "subtitle": "Podtytuł",
+      "description": "Opis",
+      "imageAltText": "Tekst alternatywny obrazu",
+      "image": "Obraz",
+      "distance": "Dystans",
+      "routeLink": "Link do trasy",
+      "coords": {
+        "lat": "Szerokość geograficzna",
+        "lng": "Długość geograficzna"
       },
-      "deadlineDate": {
-        "title": "dataKońcowa",
-        "description": "To jest końcowa data zarezerwowanego terminu"
-      },
-      "submit": "Zatwierdź",
-      "submitting": "Zatwierdzanie"
+      "submit": "Wyślij",
+      "submitting": "Wysyłanie"
     }
   },
   "footer": {

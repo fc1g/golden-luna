@@ -1,26 +1,47 @@
 'use server';
 
-import { redirect } from '@/server/libs/i18n/routing';
 import { prisma } from '@/server/libs/prisma';
-import { bookedDateSchema, FormFields } from '@/server/schemas/BookedDate';
-import { Locale } from '@/server/types/Locale';
+import { bookedDateSchema } from '@/server/schemas/BookedDate';
+import { revalidatePath } from 'next/cache';
+import { ZodError } from 'zod';
 
-export const createDate = async (formData: FormFields, locale: Locale) => {
+type prevStateProps = {
+  message: string;
+  details: string;
+};
+
+export const createDate = async (_: prevStateProps, formData: FormData) => {
   try {
-    const parsed = bookedDateSchema.safeParse(formData);
+    const initialDate = formData.get('initialDate') as string;
+    const deadlineDate = formData.get('deadlineDate') as string;
 
-    if (!parsed.success)
-      throw new Error(parsed.error.errors.map(e => e.message).join(', '));
+    const parsedData = bookedDateSchema.parse({ initialDate, deadlineDate });
 
-    await prisma.bookedDate.create({
-      data: parsed.data,
+    const newBookedDate = await prisma.bookedDate.create({
+      data: parsedData,
     });
 
-    console.log('success');
-  } catch (err) {
-    console.error('An error occurred while creating bookedDate:', err);
-    throw err;
-  }
+    console.log(
+      `Successfully created booked date with ID: ${newBookedDate.id}`,
+    );
+    revalidatePath('/admin/contacts');
+    return {
+      message: 'Success',
+      details: 'New bookedDate was Successfully created',
+    };
+  } catch (err: unknown) {
+    if (err instanceof ZodError) {
+      console.error('Validation failed:', err);
+      return {
+        message: 'Validation failed',
+        details: err.errors.map(e => e.message).join(', '),
+      };
+    }
 
-  redirect({ href: '/admin/contacts', locale });
+    console.error('An error occurred while creating bookedDate:', err);
+    return {
+      message: 'Failed',
+      details: 'An error occurred while creating bookedDate',
+    };
+  }
 };

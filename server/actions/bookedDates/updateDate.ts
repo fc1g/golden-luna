@@ -1,33 +1,26 @@
 'use server';
 
-import { redirect } from '@/server/libs/i18n/routing';
 import { prisma } from '@/server/libs/prisma';
-import { bookedDateSchema, FormFields } from '@/server/schemas/BookedDate';
-import { Locale } from '@/server/types/Locale';
+import { bookedDateSchema } from '@/server/schemas/BookedDate';
+import { revalidatePath } from 'next/cache';
 
-export const updateDate = async (
-  formData: FormFields,
-  locale: Locale,
-  id: string,
-) => {
-  try {
-    const parsed = bookedDateSchema.safeParse(formData);
+export const updateDate = async (id: string, formData: FormData) => {
+  const initialDate = formData.get('initialDate') as string;
+  const deadlineDate = formData.get('deadlineDate') as string;
 
-    if (!parsed.success)
-      throw new Error(parsed.error.errors.map(e => e.message).join(', '));
+  const parsedData = bookedDateSchema.parse({
+    initialDate,
+    deadlineDate,
+  });
 
-    await prisma.bookedDate.update({
-      where: {
-        id,
-      },
-      data: parsed.data,
-    });
-
-    console.log('success');
-  } catch (err) {
-    console.error('An error occurred while creating bookedDate:', err);
-    throw err;
-  }
-
-  redirect({ href: '/admin/contacts', locale });
+  await prisma.bookedDate.update({
+    where: {
+      id,
+    },
+    data: {
+      initialDate: parsedData.initialDate,
+      deadlineDate: parsedData.deadlineDate,
+    },
+  });
+  revalidatePath('/admin/contacts');
 };

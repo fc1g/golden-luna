@@ -1,115 +1,129 @@
 'use client';
 
+import { useToast } from '@/client/hooks/use-toast';
 import { BookedDate } from '@/client/types/BookedDate';
+import { FORM_TOAST_DURATION } from '@/client/utils';
 import { updateDate } from '@/server/actions/bookedDates/updateDate';
-import { bookedDateSchema, FormFields } from '@/server/schemas/BookedDate';
-import { Locale } from '@/server/types/Locale';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
+import { useRouter } from '@/server/libs/i18n/routing';
+import { useActionState, useEffect, useState } from 'react';
+import { ZodError } from 'zod';
 import { Button } from '../../button';
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '../../form';
 import { Input } from '../../input';
+import { Label } from '../../label';
+import { ToastAction } from '../../toast';
 
 type WrappedAdminContactsUpdatePageProps = {
   bookedDate: BookedDate;
-  id: string;
-  locale: Locale;
   translations: {
-    initialDate: {
-      title: string;
-      description: string;
-    };
-    deadlineDate: {
-      title: string;
-      description: string;
-    };
+    initialDate: string;
+    deadlineDate: string;
     submit: string;
     submitting: string;
   };
 };
 
 export default function WrappedAdminContactsUpdatePage({
-  bookedDate: { initialDate, deadlineDate },
+  bookedDate,
   translations,
-  locale,
-  id,
 }: WrappedAdminContactsUpdatePageProps) {
-  const form = useForm<FormFields>({
-    resolver: zodResolver(bookedDateSchema),
-    defaultValues: {
-      initialDate,
-      deadlineDate,
+  const updateBookedDate = async (
+    _: {
+      message: string;
+      details: string;
     },
-  });
+    formData: FormData,
+  ) => {
+    const id = bookedDate.id;
 
-  async function submitHandler(data: FormFields) {
     try {
-      await updateDate(data, locale, id);
+      await updateDate(id, formData);
+
+      return {
+        message: 'Success',
+        details: 'Successfully updated bookedDate',
+      };
     } catch (err) {
-      console.error('Error creating booked date:', err);
+      if (err instanceof ZodError) {
+        console.error('Validation failed:', err);
+        return {
+          message: 'Validation failed',
+          details: err.errors.map(e => e.message).join(', '),
+        };
+      }
+
+      console.error('An error occurred while updating bookedDate:', err);
+      return {
+        message: 'Failed',
+        details: 'Failed to update bookedDate',
+      };
     }
-  }
+  };
+
+  const [error, formAction, isPending] = useActionState(updateBookedDate, {
+    message: '',
+    details: '',
+  });
+  const { toast } = useToast();
+  const router = useRouter();
+  const [initialDate, setInitialDate] = useState(bookedDate.initialDate);
+  const [deadlineDate, setDeadlineDate] = useState(bookedDate.deadlineDate);
+
+  useEffect(() => {
+    if (!error.details || !error.message) return;
+
+    toast({
+      title: error.message,
+      description: error.details,
+      variant: error.message === 'Success' ? 'default' : 'destructive',
+      duration: FORM_TOAST_DURATION,
+      action:
+        error.message === 'Success' ? (
+          <ToastAction
+            onClick={() => router.back()}
+            altText="Return to contacts page"
+          >
+            Return
+          </ToastAction>
+        ) : undefined,
+    });
+  }, [toast, error, router]);
 
   return (
-    <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(submitHandler)}
-        className="flex h-full flex-col gap-8 px-2 sm:flex-row sm:items-center sm:justify-center"
-      >
-        <FormField
-          control={form.control}
-          name="initialDate"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>{translations.initialDate.title}</FormLabel>
-              <FormControl>
-                <Input type="date" placeholder="Initial date" {...field} />
-              </FormControl>
-              {form.formState.errors.initialDate ? (
-                <FormMessage />
-              ) : (
-                <FormDescription>
-                  {translations.initialDate.description}
-                </FormDescription>
-              )}
-            </FormItem>
-          )}
-        />
+    <form
+      action={formAction}
+      className="flex h-[60vh] w-full flex-col justify-center"
+    >
+      <div className="mt-4 flex items-end justify-center space-x-6">
+        <fieldset>
+          <Label htmlFor="initialDate">{translations.initialDate}</Label>
+          <Input
+            id="initialDate"
+            name="initialDate"
+            value={initialDate}
+            onChange={e => setInitialDate(e.target.value)}
+            type="date"
+            placeholder={translations.initialDate}
+            required
+          />
+        </fieldset>
 
-        <FormField
-          control={form.control}
-          name="deadlineDate"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>{translations.deadlineDate.title}</FormLabel>
-              <FormControl>
-                <Input type="date" placeholder="Deadline date" {...field} />
-              </FormControl>
-              {form.formState.errors.deadlineDate ? (
-                <FormMessage />
-              ) : (
-                <FormDescription>
-                  {translations.deadlineDate.description}
-                </FormDescription>
-              )}
-            </FormItem>
-          )}
-        />
+        <fieldset>
+          <Label htmlFor="deadlineDate">{translations.deadlineDate}</Label>
+          <Input
+            id="deadlineDate"
+            name="deadlineDate"
+            value={deadlineDate}
+            onChange={e => setDeadlineDate(e.target.value)}
+            type="date"
+            placeholder={translations.deadlineDate}
+            required
+          />
+        </fieldset>
 
-        <Button disabled={form.formState.isSubmitting} type="submit">
-          {form.formState.isSubmitting
-            ? translations.submitting
-            : translations.submit}
+        <Button variant="default" size="lg" disabled={isPending}>
+          {isPending ? translations.submitting : translations.submit}
         </Button>
-      </form>
-    </Form>
+      </div>
+    </form>
   );
 }

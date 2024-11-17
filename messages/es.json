@@ -169,13 +169,22 @@
   },
   "admin": {
     "calendar": {
-      "initialDate": {
-        "title": "fechaInicial",
-        "description": "Esta es la fecha inicial de la reserva"
-      },
-      "deadlineDate": {
-        "title": "fechaLímite",
-        "description": "Esta es la fecha límite de la reserva"
+      "initialDate": "Fecha inicial",
+      "deadlineDate": "Fecha límite",
+      "submit": "Enviar",
+      "submitting": "Enviando"
+    },
+    "surrounding": {
+      "title": "Título",
+      "subtitle": "Subtítulo",
+      "description": "Descripción",
+      "imageAltText": "Texto alternativo de la imagen",
+      "image": "Imagen",
+      "distance": "Distancia",
+      "routeLink": "Enlace de la ruta",
+      "coords": {
+        "lat": "Latitud",
+        "lng": "Longitud"
       },
       "submit": "Enviar",
       "submitting": "Enviando"

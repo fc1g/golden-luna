@@ -46,6 +46,12 @@ export default function BookedDatesList({
   );
 
   async function deleteHandler(id: string) {
+    // TODO:
+    const decision = confirm(
+      'Are you sure, you want to delete this booked date ?',
+    );
+    if (!decision) return;
+
     startTransition(() => {
       optimisticDelete(id);
     });

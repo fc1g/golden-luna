@@ -169,13 +169,22 @@
   },
   "admin": {
     "calendar": {
-      "initialDate": {
-        "title": "initialdDate",
-        "description": "This is initial date of booked date"
-      },
-      "deadlineDate": {
-        "title": "deadlineDate",
-        "description": "This is deadline date of booked date"
+      "initialDate": "initialdDate",
+      "deadlineDate": "deadlineDate",
+      "submit": "Submit",
+      "submitting": "Submitting"
+    },
+    "surrounding": {
+      "title": "Title",
+      "subtitle": "Subtitle",
+      "description": "Description",
+      "imageAltText": "Image alt text",
+      "image": "Image",
+      "distance": "Distance",
+      "routeLink": "Route link",
+      "coords": {
+        "lat": "Lattitude",
+        "lng": "Longtitude"
       },
       "submit": "Submit",
       "submitting": "Submitting"

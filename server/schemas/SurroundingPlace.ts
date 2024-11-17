@@ -97,20 +97,30 @@ const routeLinkSchema = z
     'The link should be in the format of a Google Maps route.',
   );
 
-const distanceSchema = z
-  .number()
-  .min(0, 'The distance cannot be negative.')
-  .max(100000, 'The distance should not exceed 100 km.');
+const distanceSchema = z.preprocess(
+  value => (value !== undefined ? Number(value) : undefined),
+  z
+    .number()
+    .min(0, 'The distance cannot be negative.')
+    .max(100000, 'The distance should not exceed 100 km.'),
+);
 
 const coordsSchema = z.tuple([
-  z
-    .number()
-    .min(-90, 'The latitude should be at least -90.')
-    .max(90, 'The latitude should not exceed 90.'),
-  z
-    .number()
-    .min(-180, 'The longitude should be at least -180.')
-    .max(180, 'The longitude should not exceed 180.'),
+  z.preprocess(
+    value => (value !== undefined ? Number(value) : undefined),
+    z
+      .number()
+      .min(-90, 'The latitude should be at least -90.')
+      .max(90, 'The latitude should not exceed 90.'),
+  ),
+
+  z.preprocess(
+    value => (value !== undefined ? Number(value) : undefined),
+    z
+      .number()
+      .min(-180, 'The longitude should be at least -180.')
+      .max(180, 'The longitude should not exceed 180.'),
+  ),
 ]);
 
 export const surroundingPlaceSchema = z.object({
