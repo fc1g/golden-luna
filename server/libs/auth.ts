@@ -1,4 +1,4 @@
-import NextAuth, { Session, User } from 'next-auth';
+import NextAuth, { User } from 'next-auth';
 import Google from 'next-auth/providers/google';
 import {
   AUTH_GOOGLE_ID,
@@ -16,10 +16,10 @@ const authConfig = {
       clientSecret: AUTH_GOOGLE_SECRET,
     }),
   ],
-  pages: {
-    signIn: '/api/auth/signin',
-  },
   callbacks: {
+    pages: {
+      signIn: '/api/auth/signin',
+    },
     async signIn({ user }: { user: User }) {
       if (allowedEmails.includes(user.email || '')) {
         return true;
@@ -27,12 +27,6 @@ const authConfig = {
 
       console.warn(`Access denied for user: ${user.email}`);
       return false;
-    },
-    async session({ session }: { session: Session }) {
-      return session;
-    },
-    async jwt({ token }: { token: any }) {
-      return token;
     },
   },
   trustHost: true,
