@@ -3,7 +3,8 @@ import AdminSurroundingPageSkeleton from '@/client/components/skeleton/AdminSurr
 import WrappedAdminSurroundingPage from '@/client/components/ui/admin/surrounding/WrappedAdminSurroundingPage';
 import { Params } from '@/client/types/Params';
 import { auth } from '@/server/libs/auth';
-import { redirect } from '@/server/libs/i18n/routing';
+import { redirect } from 'next/navigation';
+
 import { setRequestLocale } from 'next-intl/server';
 import { Suspense } from 'react';
 
@@ -19,7 +20,7 @@ export default async function AdminSurroundingPage({
   setRequestLocale(locale);
 
   const session = await auth();
-  if (!session) redirect({ href: '/', locale });
+  if (!session) redirect('/api/auth/signin');
 
   const currSearchParams = await searchParams;
 

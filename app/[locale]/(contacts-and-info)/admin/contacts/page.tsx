@@ -3,8 +3,8 @@ import AdminContactsPageSkeleton from '@/client/components/skeleton/AdminContact
 import WrappedAdminContactsPage from '@/client/components/ui/admin/contacts/WrappedAdminContactsPage';
 import { Params } from '@/client/types/Params';
 import { auth } from '@/server/libs/auth';
-import { redirect } from '@/server/libs/i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
+import { redirect } from 'next/navigation';
 import { Suspense } from 'react';
 
 type AdminContactsPageProps = {
@@ -19,7 +19,7 @@ export default async function AdminContactsPage({
   setRequestLocale(locale);
 
   const session = await auth();
-  if (!session) redirect({ href: '/', locale });
+  if (!session) redirect('/api/auth/signin');
 
   const currSearchParams = await searchParams;
 

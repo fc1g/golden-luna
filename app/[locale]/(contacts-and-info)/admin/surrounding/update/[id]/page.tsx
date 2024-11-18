@@ -2,15 +2,15 @@ import WrappedAdminSurroundingUpdatePage from '@/client/components/ui/admin/surr
 import { Params } from '@/client/types/Params';
 import { fetchPlace } from '@/server/actions/surrounding/fetchPlace';
 import { auth } from '@/server/libs/auth';
-import { redirect } from '@/server/libs/i18n/routing';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { redirect } from 'next/navigation';
 
 export default async function AdminSurroundingUpdatePage({ params }: Params) {
   const { id, locale } = await params;
   setRequestLocale(locale);
 
   const session = await auth();
-  if (!session) redirect({ href: '/', locale });
+  if (!session) redirect('/api/auth/signin');
 
   const place = await fetchPlace(id!);
 

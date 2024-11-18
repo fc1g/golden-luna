@@ -3,8 +3,8 @@ import { Params } from '@/client/types/Params';
 import { fetchDate } from '@/server/actions/bookedDates/fetchDate';
 import { fetchDatesStaticParams } from '@/server/actions/bookedDates/fetchDatesStaticParams';
 import { auth } from '@/server/libs/auth';
-import { redirect } from '@/server/libs/i18n/routing';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { redirect } from 'next/navigation';
 
 export const generateStaticParams = async () => {
   const bookedDatesId = await fetchDatesStaticParams();
@@ -17,7 +17,7 @@ export default async function AdminContactsUpdatePage({ params }: Params) {
   setRequestLocale(locale);
 
   const session = await auth();
-  if (!session) redirect({ href: '/', locale });
+  if (!session) redirect('/api/auth/signin');
 
   const bookedDate = await fetchDate(id!);
 
