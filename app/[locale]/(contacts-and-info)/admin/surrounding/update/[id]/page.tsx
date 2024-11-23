@@ -1,9 +1,21 @@
 import WrappedAdminSurroundingUpdatePage from '@/client/components/ui/admin/surrounding/WrappedAdminSurroundingUpdatePage';
 import { Params } from '@/client/types/Params';
 import { fetchPlace } from '@/server/actions/surrounding/fetchPlace';
+import { fetchPlaces } from '@/server/actions/surrounding/fetchPlaces';
 import { auth } from '@/server/libs/auth';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { redirect } from 'next/navigation';
+
+export const revalidate = 60;
+export const dynamicParams = true;
+
+export const generateStaticParams = async () => {
+  const { places } = await fetchPlaces();
+
+  return places.map(({ id }) => ({
+    id,
+  }));
+};
 
 export default async function AdminSurroundingUpdatePage({ params }: Params) {
   const { id, locale } = await params;

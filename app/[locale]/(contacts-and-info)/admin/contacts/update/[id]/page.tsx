@@ -1,15 +1,20 @@
 import WrappedAdminContactsUpdatePage from '@/client/components/ui/admin/contacts/WrappedAdminContactsUpdatePage';
 import { Params } from '@/client/types/Params';
 import { fetchDate } from '@/server/actions/bookedDates/fetchDate';
-import { fetchDatesStaticParams } from '@/server/actions/bookedDates/fetchDatesStaticParams';
+import { fetchDates } from '@/server/actions/bookedDates/fetchDates';
 import { auth } from '@/server/libs/auth';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { redirect } from 'next/navigation';
 
-export const generateStaticParams = async () => {
-  const bookedDatesId = await fetchDatesStaticParams();
+export const revalidate = 60;
+export const dynamicParams = true;
 
-  return bookedDatesId.map(({ id }) => ({ id }));
+export const generateStaticParams = async () => {
+  const { bookedDates } = await fetchDates();
+
+  return bookedDates.map(({ id }) => ({
+    id,
+  }));
 };
 
 export default async function AdminContactsUpdatePage({ params }: Params) {

@@ -163,4 +163,5 @@ export const updatePlace = async (id: string, formData: FormData) => {
   }
 
   revalidatePath('/admin/surrounding');
+  revalidatePath(`/surrounding/${id}`);
 };
