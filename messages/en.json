@@ -202,5 +202,36 @@
     "404b": "Back to Homepage",
     "404m": "Something's missing",
     "404d": "Sorry, we can't find that page. You'll find lots to explore on the home page"
+  },
+  "auth": {
+    "email": {
+      "title": "Email",
+      "description": "This is your email address"
+    },
+    "password": {
+      "title": "Password",
+      "description": "Enter your password"
+    },
+    "loginBtnText": "Sign in",
+    "signupBtnText": "Sign up",
+    "submitting": "Submitting",
+    "signup": {
+      "title": "Create an account",
+      "passwordConfirm": {
+        "title": "PasswordConfirm",
+        "description": "Confirm your password"
+      },
+      "login": {
+        "question": "Already have an account? Login here",
+        "linkText": "Login here"
+      }
+    },
+    "login": {
+      "title": "Sign in to your account",
+      "signup": {
+        "question": "Don't have an account yet?",
+        "linkText": "Sign up"
+      }
+    }
   }
 }
